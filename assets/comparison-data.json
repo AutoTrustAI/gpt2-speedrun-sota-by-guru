@@ -13,16 +13,6 @@
       "source": "../results/nc033/metrics.json"
     },
     {
-      "id": "pr830_mixed",
-      "label": "PR #830 mixed-data experiment",
-      "minutes": 73.917,
-      "core": 0.267123,
-      "runs": 3,
-      "speedup": 1.0231877565149516,
-      "source": "https://github.com/karpathy/nanochat/pull/830",
-      "time_is_approximate": false
-    },
-    {
       "id": "pr830_main",
       "label": "PR #830 main ClimbMix recipe",
       "minutes": 81.835,

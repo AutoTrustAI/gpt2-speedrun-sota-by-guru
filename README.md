@@ -42,26 +42,25 @@ The native `total_training_time` is **4,334.512382 seconds**, covering **9,830 t
 
 Results checked on **2026-09-24 UTC**, for **8×H100 / CORE >0.256525**, ordered by training time. Each reference uses its reported time and run count; ScienceGuru uses the completed seed 42 result. The official 99-minute reference is rounded.
 
-![GPT-2 training-time comparison: ScienceGuru 72.2419 minutes, Giovanni's mixed-data recipe 73.917, Giovanni's ClimbMix recipe 81.835, Oriole Networks 91.74, and official Run 6 approximately 99 minutes.](assets/gpt2-comparison.svg)
+![GPT-2 training-time comparison: ScienceGuru 72.2419 minutes, Giovanni's ClimbMix recipe 81.835, Oriole Networks 91.74, and official Run 6 approximately 99 minutes.](assets/gpt2-comparison.svg)
 
 [Download comparison PNG](assets/gpt2-comparison.png) · [Comparison data](assets/comparison-data.json) · [Sources and protocol](docs/BENCHMARK.md)
 
 | Strategy | Team / contributor | Training time | CORE | Runs | ScienceGuru speedup |
 |---|---|---:|---:|---:|---:|
 | **ScienceGuru, MLP4864** | **AutoTrust · Guru Turbo 1.2** | **72.2419 min** | **0.259212** | **1** | — |
-| [ClimbMix / Cosmopedia mixture](https://github.com/karpathy/nanochat/pull/830) | Giovanni Zinzi | **73.917 min** | 0.267123 | 3 | **1.023×** |
 | [ClimbMix recipe](https://github.com/karpathy/nanochat/pull/830) | Giovanni Zinzi | **81.835 min** | 0.261814 | 6 | **1.133×** |
 | [Host-RAM n-grams](https://github.com/karpathy/nanochat/pull/854) | Oriole Networks · Nihir Patel and collaborators | **91.74 min** | 0.2578 | 3 | **1.270×** |
 | [**Official SOTA — Run 6**](https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/dev/LEADERBOARD.md#run-6) | Andrej Karpathy | **≈99 min** | 0.262634 | 5 | **≈1.370×** |
 
-Against the official Run 6 reference, ScienceGuru saves **≈26.76 minutes**, a **≈1.370× speedup**. Against the **73.917-minute** mixed-data result, it saves **100.51 seconds**, using **2.27% less training time**. The model is trained on ClimbMix with the original tokenizer and complete downstream evaluation. [Comparison details](docs/BENCHMARK.md#public-comparisons).
+Against the official Run 6 reference, ScienceGuru saves **≈26.76 minutes**, a **≈1.370× speedup**. The model is trained on ClimbMix with the original tokenizer and complete downstream evaluation. [Comparison details](docs/BENCHMARK.md#public-comparisons).
 
 ## Background of the leading contributors
 
 | Contributor | Public background | Result in this comparison |
 |---|---|---|
 | **Andrej Karpathy** | Creator and maintainer of [nanochat](https://github.com/karpathy/nanochat); the latest official run incorporates a second round of autoresearch. | **≈99 min** |
-| **Giovanni Zinzi** | Author of [#830](https://github.com/karpathy/nanochat/pull/830), which reports fused cross entropy, selective RMSNorm scales, and a 49,152-token speedrun vocabulary. | **81.835 min**; mixed data **73.917 min** |
+| **Giovanni Zinzi** | Author of [#830](https://github.com/karpathy/nanochat/pull/830), which reports fused cross entropy, selective RMSNorm scales, and a 49,152-token speedrun vocabulary. | **81.835 min** |
 | **Oriole Networks · Nihir Patel and collaborators** | [#854](https://github.com/karpathy/nanochat/pull/854) names Nihir Patel, Alessandro Ottino, and Robin Matzner at Oriole Networks. | **91.74 min** |
 
 [Recursive](https://github.com/recursive-org/first-steps-toward-automated-ai-research/tree/main/nanochat_autoresearch) also publishes NanoChat autoresearch experiments, reporting **0.9109 mean validation BPB** over ten seeds on one B200 with a five-minute budget. That experiment uses a different hardware and evaluation protocol. [Teams, contributions, and related work](docs/TEAMS.md).

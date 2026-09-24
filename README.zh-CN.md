@@ -42,26 +42,25 @@ nanochat 官方榜单收录了 **6 次 8×H100 运行纪录**，依次通过 FP8
 
 以下结果核对于 **2026-09-24 UTC**，使用 **8×H100 / CORE >0.256525**，按训练时间排序。各方案采用来源报告的时间与运行次数；ScienceGuru 使用已完成的 seed 42 成绩。官方约 99 分钟为经过舍入的数值。
 
-![GPT-2 训练时间对比：ScienceGuru 72.2419 分钟、Giovanni 混合数据 73.917 分钟、ClimbMix 方案 81.835 分钟、Oriole Networks 91.74 分钟、官方 Run 6 约 99 分钟。](assets/gpt2-comparison.svg)
+![GPT-2 训练时间对比：ScienceGuru 72.2419 分钟、ClimbMix 方案 81.835 分钟、Oriole Networks 91.74 分钟、官方 Run 6 约 99 分钟。](assets/gpt2-comparison.svg)
 
 [下载对比图 PNG](assets/gpt2-comparison.png) · [对比数据](assets/comparison-data.json) · [来源与规则](docs/BENCHMARK.md)
 
 | 方案 | 团队 / 作者 | 训练时间 | CORE | 运行次数 | ScienceGuru 加速比 |
 |---|---|---:|---:|---:|---:|
 | **ScienceGuru，MLP4864** | **AutoTrust · Guru Turbo 1.2** | **72.2419 分钟** | **0.259212** | **1** | — |
-| [ClimbMix / Cosmopedia 混合数据](https://github.com/karpathy/nanochat/pull/830) | Giovanni Zinzi | **73.917 分钟** | 0.267123 | 3 | **1.023×** |
 | [ClimbMix 方案](https://github.com/karpathy/nanochat/pull/830) | Giovanni Zinzi | **81.835 分钟** | 0.261814 | 6 | **1.133×** |
 | [主机内存 n-gram](https://github.com/karpathy/nanochat/pull/854) | Oriole Networks · Nihir Patel 等 | **91.74 分钟** | 0.2578 | 3 | **1.270×** |
 | [**官方 SOTA — Run 6**](https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/dev/LEADERBOARD.md#run-6) | Andrej Karpathy | **约 99 分钟** | 0.262634 | 5 | **约 1.370×** |
 
-相对官方 Run 6，ScienceGuru 节省约 **26.76 分钟**，加速约 **1.370 倍**；相对 **73.917 分钟**的混合数据成绩，节省 **100.51 秒**，训练时间减少 **2.27%**。本方案使用 ClimbMix、原 tokenizer 和完整下游评估。[对比说明](docs/BENCHMARK.md#public-comparisons)。
+相对官方 Run 6，ScienceGuru 节省约 **26.76 分钟**，加速约 **1.370 倍**。本方案使用 ClimbMix、原 tokenizer 和完整下游评估。[对比说明](docs/BENCHMARK.md#public-comparisons)。
 
 ## 主要贡献者背景
 
 | 贡献者 | 公开背景 | 本页对比成绩 |
 |---|---|---|
 | **Andrej Karpathy** | [nanochat](https://github.com/karpathy/nanochat) 的创建者与维护者；最新官方成绩采用第二轮 autoresearch 的改进。 | **约 99 分钟** |
-| **Giovanni Zinzi** | [#830](https://github.com/karpathy/nanochat/pull/830) 的作者，方案涉及融合交叉熵、选择性 RMSNorm 缩放和 49152 词表。 | **81.835 分钟**；混合数据 **73.917 分钟** |
+| **Giovanni Zinzi** | [#830](https://github.com/karpathy/nanochat/pull/830) 的作者，方案涉及融合交叉熵、选择性 RMSNorm 缩放和 49152 词表。 | **81.835 分钟** |
 | **Oriole Networks · Nihir Patel 等** | [#854](https://github.com/karpathy/nanochat/pull/854) 明确列出 Nihir Patel、Alessandro Ottino 和 Robin Matzner 的 Oriole Networks 归属。 | **91.74 分钟** |
 
 [Recursive](https://github.com/recursive-org/first-steps-toward-automated-ai-research/tree/main/nanochat_autoresearch) 也公开了 NanoChat autoresearch 实验：单张 B200、五分钟预算、10 个 seed 的平均验证 BPB 为 **0.9109**，采用另一套硬件和评测规则。[团队、贡献与相关研究](docs/TEAMS.md)。

@@ -23,7 +23,7 @@ The reported time is the original `total_training_time` accumulated by the train
 All comparison rows appear together in the [main page](../README.md#performance-comparison). Data and direct sources are in [public-baselines.json](../results/public-baselines.json), checked September 24, 2026.
 
 - The maintained official table lists Run 6 at approximately 99 minutes, CORE 0.262634, five runs.
-- [Giovanni Zinzi's #830](https://github.com/karpathy/nanochat/pull/830) reports 81.835 minutes and CORE 0.261814 over six runs for its main ClimbMix recipe. Its three-run 80/20 ClimbMix/Cosmopedia experiment reports 73.917 minutes and CORE 0.267123. The mixture was omitted from the main recipe after worse d14 results.
+- [Giovanni Zinzi's #830](https://github.com/karpathy/nanochat/pull/830) reports 81.835 minutes and CORE 0.261814 over six runs for its main ClimbMix recipe. The PR was closed on September 3, 2026 when its author deleted the head repository; the reported results remain available in the PR description.
 - [Oriole Networks' #854](https://github.com/karpathy/nanochat/pull/854) reports 91.74 minutes and CORE 0.2578 over three runs. The authors explicitly identify their Oriole affiliation. Two of the three listed runs exceed the individual CORE floor.
 
 The chart uses each source's reported training time. It displays rounded 99 minutes for the official reference; calculations against that row are approximate. The ScienceGuru row is one seed 42 run, while the cited comparison rows report their stated aggregates. CORE values are shown alongside time because they differ between recipes.

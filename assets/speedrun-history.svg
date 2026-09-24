@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="1440pt" height="705.6pt" viewBox="0 0 1440 705.6" version="1.1" role="img" aria-labelledby="chart-title chart-description">
- <desc id="chart-description">2026-01-29 d24 baseline: approximately 182.4 minutes; 2026-02-02 FP8 training: approximately 174.6 minutes; 2026-02-05 Larger global batch: approximately 165.6 minutes; 2026-03-04 ClimbMix data: approximately 121.2 minutes; 2026-03-09 Autoresearch round 1: approximately 108 minutes; 2026-03-14 Autoresearch round 2: approximately 99 minutes; 2026-08-15 Giovanni · ClimbMix: 81.835 minutes; 2026-08-15 Giovanni · mixed data: 73.917 minutes; 2026-09-11 Oriole · n-grams: 91.74 minutes; 2026-09-24 ScienceGuru + Guru Turbo 1.2: 72.2419 minutes</desc><title id="chart-title">ScienceGuru Time-to-GPT-2 training-time history</title><metadata>
+ <desc id="chart-description">2026-01-29 d24 baseline: approximately 182.4 minutes; 2026-02-02 FP8 training: approximately 174.6 minutes; 2026-02-05 Larger global batch: approximately 165.6 minutes; 2026-03-04 ClimbMix data: approximately 121.2 minutes; 2026-03-09 Autoresearch round 1: approximately 108 minutes; 2026-03-14 Autoresearch round 2: approximately 99 minutes; 2026-08-15 Giovanni · ClimbMix: 81.835 minutes; 2026-09-11 Oriole · n-grams: 91.74 minutes; 2026-09-24 ScienceGuru + Guru Turbo 1.2: 72.2419 minutes</desc><title id="chart-title">ScienceGuru Time-to-GPT-2 training-time history</title><metadata>
   <rdf:RDF>
    <ns2:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
@@ -189,11 +189,6 @@
    </g>
    <g id="PathCollection_3">
     <g clip-path="url(#p9883365f41)">
-     <use ns4:href="#ma2111ac89a" x="1065.125275" y="509.898935" style="fill: #fffdf7; stroke: #6b8b7b; stroke-width: 1.6" />
-    </g>
-   </g>
-   <g id="PathCollection_4">
-    <g clip-path="url(#p9883365f41)">
      <use ns4:href="#ma2111ac89a" x="1189.028571" y="465.513374" style="fill: #fffdf7; stroke: #6b8b7b; stroke-width: 1.6" />
     </g>
    </g>
@@ -268,36 +263,26 @@
     <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1c2a25" transform="translate(829.296 375.41103)">81.835 min</text>
    </g>
    <g id="patch_19">
-    <path d="M 1010.096479 513.56665  Q 1033.619072 511.998849 1057.141666 510.431049  " style="fill: none; stroke: #a9b8a7; stroke-width: 1.1; stroke-linecap: round" />
+    <path d="M 1177.253843 410.806222  Q 1182.299282 434.24809 1187.344722 457.689957  " style="fill: none; stroke: #a9b8a7; stroke-width: 1.1; stroke-linecap: round" />
    </g>
    <g id="text_23">
     <g id="patch_20">
-     <path d="M 863.28 541.55712  L 1001.161875 541.55712  Q 1003.561875 541.55712 1003.561875 539.15712  L 1003.561875 498.35712  Q 1003.561875 495.95712 1001.161875 495.95712  L 863.28 495.95712  Q 860.88 495.95712 860.88 498.35712  L 860.88 539.15712  Q 860.88 541.55712 863.28 541.55712  z " style="fill: #fffdf7; stroke: #d2dacf; stroke-width: 1.1; stroke-linejoin: miter" />
-    </g>
-    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1c2a25" transform="translate(866.88 514.83087)">Giovanni · Mixed data</text>
-    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1c2a25" transform="translate(866.88 531.63087)">73.917 min</text>
-   </g>
-   <g id="patch_21">
-    <path d="M 1177.253843 410.806222  Q 1182.299282 434.24809 1187.344722 457.689957  " style="fill: none; stroke: #a9b8a7; stroke-width: 1.1; stroke-linecap: round" />
-   </g>
-   <g id="text_24">
-    <g id="patch_22">
      <path d="M 1088.784 404.38848  L 1253.1465 404.38848  Q 1255.5465 404.38848 1255.5465 401.98848  L 1255.5465 361.18848  Q 1255.5465 358.78848 1253.1465 358.78848  L 1088.784 358.78848  Q 1086.384 358.78848 1086.384 361.18848  L 1086.384 401.98848  Q 1086.384 404.38848 1088.784 404.38848  z " style="fill: #fffdf7; stroke: #d2dacf; stroke-width: 1.1; stroke-linejoin: miter" />
     </g>
     <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1c2a25" transform="translate(1092.384 376.49973)">Oriole Networks · n-grams</text>
     <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1c2a25" transform="translate(1092.384 394.46223)">91.74 min</text>
    </g>
-   <g id="patch_23">
+   <g id="patch_21">
     <path d="M 1275.503697 487.276054  Q 1264.924802 497.845701 1254.345906 508.415348  " style="fill: none; stroke: #1f4b41; stroke-width: 1.1; stroke-linecap: round" />
    </g>
-   <g id="text_25">
-    <g id="patch_24">
+   <g id="text_24">
+    <g id="patch_22">
      <path d="M 1251.415688 482.48304  L 1366.236 482.48304  Q 1369.236 482.48304 1369.236 479.48304  L 1369.236 428.48304  Q 1369.236 425.48304 1366.236 425.48304  L 1251.415688 425.48304  Q 1248.415688 425.48304 1248.415688 428.48304  L 1248.415688 479.48304  Q 1248.415688 482.48304 1251.415688 482.48304  z " style="fill: #fffdf7; stroke: #1f4b41; stroke-width: 1.1; stroke-linejoin: miter" />
     </g>
     <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #1f4b41" transform="translate(1255.915688 449.075228)">ScienceGuru</text>
     <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #1f4b41" transform="translate(1256.745375 470.075227)">72.2419 min</text>
    </g>
-   <g id="PathCollection_5">
+   <g id="PathCollection_4">
     <defs>
      <path id="m07f4eed069" d="M 0 -11.726039  L -2.63266 -3.623545  L -11.152126 -3.623545  L -4.259733 1.384071  L -6.892393 9.486565  L -0 4.478948  L 6.892393 9.486565  L 4.259733 1.384071  L 11.152126 -3.623545  L 2.63266 -3.623545  z " style="stroke: #1f4b41" />
     </defs>
@@ -306,28 +291,28 @@
     </g>
    </g>
   </g>
-  <g id="text_26">
+  <g id="text_25">
    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a25" x="74.88" y="38.808" transform="rotate(-0 74.88 38.808)">AutoTrust</text>
   </g>
-  <g id="text_27">
+  <g id="text_26">
    <text style="font-weight: 700; font-size: 30px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a25" x="74.88" y="81.144" transform="rotate(-0 74.88 81.144)">ScienceGuru · Guru Turbo 1.2</text>
   </g>
-  <g id="text_28">
+  <g id="text_27">
    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6c7c73" x="74.88" y="116.424" transform="rotate(-0 74.88 116.424)">Time-to-GPT-2 · 8× H100 · Complete CORE target &gt; 0.256525</text>
   </g>
-  <g id="text_29">
+  <g id="text_28">
    <text style="font-weight: 700; font-size: 32px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1f4b41" x="1375.2" y="40.2192" transform="rotate(-0 1375.2 40.2192)">72.2419 min</text>
   </g>
-  <g id="text_30">
+  <g id="text_29">
    <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1c2a25" x="1375.2" y="79.7328" transform="rotate(-0 1375.2 79.7328)">≈1.37× faster than official SOTA</text>
   </g>
-  <g id="text_31">
+  <g id="text_30">
    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6c7c73" x="1375.2" y="110.7792" transform="rotate(-0 1375.2 110.7792)">≈27.03% less training time · CORE 0.259212</text>
   </g>
-  <g id="text_32">
+  <g id="text_31">
    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6c7c73" x="93.6" y="673.848" transform="rotate(-0 93.6 673.848)">Dates: official leaderboard, submission opening, or repository publication · Sources and exact values: docs/SPEEDRUN_CHART.md</text>
   </g>
-  <g id="text_33">
+  <g id="text_32">
    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6c7c73" x="93.6" y="694.3104" transform="rotate(-0 93.6 694.3104)">Official times are converted from rounded leaderboard hours. All plotted results use the 8× H100 Time-to-GPT-2 protocol.</text>
   </g>
   <g id="legend_1">
@@ -340,7 +325,7 @@
      <use ns4:href="#m8178b39f4e" x="109.2" y="631.974787" style="fill: #d2dccb; stroke: #8b9f85" />
     </g>
    </g>
-   <g id="text_34">
+   <g id="text_33">
     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a25" x="130.8" y="636.174787" transform="rotate(-0 130.8 636.174787)">nanochat leaderboard · 6 runs</text>
    </g>
    <g id="line2d_31">
@@ -352,7 +337,7 @@
      <use ns4:href="#m7929a5fe0f" x="360.7275" y="631.974787" style="fill: #fffdf7; stroke: #6b8b7b; stroke-linejoin: miter" />
     </g>
    </g>
-   <g id="text_35">
+   <g id="text_34">
     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a25" x="382.3275" y="636.174787" transform="rotate(-0 382.3275 636.174787)">Selected comparisons</text>
    </g>
    <g id="line2d_32">
@@ -364,7 +349,7 @@
      <use ns4:href="#m081828328d" x="562.483125" y="631.974787" style="fill: #1f4b41; stroke: #1f4b41; stroke-linejoin: bevel" />
     </g>
    </g>
-   <g id="text_36">
+   <g id="text_35">
     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1c2a25" x="584.083125" y="636.174787" transform="rotate(-0 584.083125 636.174787)">ScienceGuru · seed 42</text>
    </g>
   </g>

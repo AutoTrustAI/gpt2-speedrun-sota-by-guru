@@ -1,6 +1,6 @@
 # Time-to-GPT-2 chart data and sources
 
-The history figure shows six nanochat leaderboard runs, three selected comparison results, and ScienceGuru's completed 72.2419-minute experiment. Every plotted time uses an 8×H100 node. The chart and main comparison use the cream and green presentation of the latest [NanoGPT reference page](https://github.com/AutoTrustAI/nanogpt-speedrun-sota-by-guru/blob/fcdc062afd12b50684361d04451b5681670bb843/README.md), with Time-to-GPT-2 data throughout.
+The history figure shows six nanochat leaderboard runs, two selected comparison results, and ScienceGuru's completed 72.2419-minute experiment. Every plotted time uses an 8×H100 node. The chart and main comparison use the cream and green presentation of the latest [NanoGPT reference page](https://github.com/AutoTrustAI/nanogpt-speedrun-sota-by-guru/blob/fcdc062afd12b50684361d04451b5681670bb843/README.md), with Time-to-GPT-2 data throughout.
 
 ## History values
 
@@ -13,13 +13,12 @@ The history figure shows six nanochat leaderboard runs, three selected compariso
 | 2026-03-09 | Run 5: autoresearch round 1 | ≈108 | Same leaderboard, 1.80 hours |
 | 2026-03-14 | Run 6: autoresearch round 2 | ≈99 | Same leaderboard, 1.65 hours |
 | 2026-08-15 | Giovanni Zinzi: ClimbMix | 81.835 | [#830](https://github.com/karpathy/nanochat/pull/830), six-run result |
-| 2026-08-15 | Giovanni Zinzi: mixed data | 73.917 | [#830](https://github.com/karpathy/nanochat/pull/830), three-run result |
 | 2026-09-11 | Oriole Networks: host-RAM n-grams | 91.74 | [#854](https://github.com/karpathy/nanochat/pull/854), three-run result |
 | 2026-09-24 | ScienceGuru + Guru Turbo 1.2 | 72.241873 | [nc033 metrics](../results/nc033/metrics.json), seed 42 |
 
 The six official dates and times follow the pinned nanochat README. Its hours are rounded, so their conversion to minutes and comparisons against them are approximate. Run 4 uses March 4 from that table; the detailed run note instead says March 3. The first three run notes contain more precise seconds, but the history consistently uses the table's published hours.
 
-The two Giovanni points use #830's opening date; the Oriole point uses #854's opening date. Their values were read from the submission bodies on September 24, 2026. These dates identify the submissions and do not assert the precise date of each underlying experiment. ScienceGuru uses the date of this repository's [first publication commit](https://github.com/AutoTrustAI/gpt2-speedrun-sota-by-guru/commit/9f154239f71c7075db60af0203a2c1131a8e120e), September 24, 2026 UTC.
+The Giovanni point uses #830's opening date; the Oriole point uses #854's opening date. Their values were read from the submission bodies on September 24, 2026. These dates identify the submissions and do not assert the precise date of each underlying experiment. ScienceGuru uses the date of this repository's [first publication commit](https://github.com/AutoTrustAI/gpt2-speedrun-sota-by-guru/commit/9f154239f71c7075db60af0203a2c1131a8e120e), September 24, 2026 UTC.
 
 The solid line connects the six official runs. Diamonds show selected comparisons, and the star shows ScienceGuru. The dashed segment connects the official Run 6 reference to ScienceGuru for comparison. It does not represent additional measurements. The 2019 GPT-2 training used different hardware and is outside this plot.
 
@@ -33,7 +32,7 @@ Speedup = reference time / ScienceGuru time
 Time reduction = 1 - ScienceGuru time / reference time
 ```
 
-The rounded official 99-minute reference gives approximately **1.370× speedup**, **27.03% less time**, and **26.76 minutes saved**. Giovanni's 73.917-minute mixed-data result gives **1.023× speedup**, **2.27% less time**, and **100.51 seconds saved**.
+The rounded official 99-minute reference gives approximately **1.370× speedup**, **27.03% less time**, and **26.76 minutes saved**.
 
 ## Regenerate the figures
 

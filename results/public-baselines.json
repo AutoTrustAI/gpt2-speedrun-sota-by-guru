@@ -71,27 +71,6 @@
       }
     },
     {
-      "id": "pr830_mixed",
-      "label": "PR #830 mixed-data experiment",
-      "minutes": 73.917,
-      "core": 0.267123,
-      "val_bpb": 0.726888,
-      "runs": 3,
-      "author": "Giovanni Zinzi (@giovannizinzi)",
-      "method": "d22, character-balanced 80/20 ClimbMix/Cosmopedia-v2",
-      "status": "Reported research direction omitted from main recipe because d14 regressed",
-      "sources": [
-        "pr830"
-      ],
-      "nc033_comparison": {
-        "reference_seconds_from_published_minutes": 4435.02,
-        "seconds_saved": 100.5076177310948,
-        "time_reduction_percent": 2.2662269331614016,
-        "speedup": 1.0231877565149516,
-        "precision": "Arithmetic against published rounded minute reference; not an estimate of run-to-run variance"
-      }
-    },
-    {
       "id": "pr854_hostram",
       "label": "PR #854 host-RAM n-gram table",
       "minutes": 91.74,

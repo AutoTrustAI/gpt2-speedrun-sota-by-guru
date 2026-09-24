@@ -87,7 +87,6 @@ callout(ax, lookup['run4'], 'Run 4 · ClimbMix\n≈121.2 min', (.30, .51))
 callout(ax, lookup['run5'], 'Run 5 · Autoresearch round 1\n≈108 min', (.06, .12))
 callout(ax, lookup['run6'], 'Run 6 · Autoresearch round 2\n≈99 min · official SOTA', (.35, .13))
 callout(ax, lookup['pr830_main'], 'Giovanni · ClimbMix\n81.835 min', (.57, .53))
-callout(ax, lookup['pr830_mixed'], 'Giovanni · Mixed data\n73.917 min', (.60, .12))
 callout(ax, lookup['pr854_hostram'], 'Oriole Networks · n-grams\n91.74 min', (.78, .48))
 callout(ax, ours, 'ScienceGuru\n72.2419 min', (.995, .29), strong=True, align='right')
 legend = [Line2D([0], [0], color=HISTORY, marker='o', markerfacecolor='#D2DCCB', lw=2, label='nanochat leaderboard · 6 runs'),
@@ -113,4 +112,4 @@ for tag, ident, text in [('title', 'chart-title', 'ScienceGuru Time-to-GPT-2 tra
     ('desc', 'chart-description', '; '.join(f"{p['date']} {p['label']}: {described_time(p)} minutes" for p in points))]:
     element = ET.Element(f'{{{ns}}}{tag}', {'id': ident}); element.text = text; svg.insert(0, element)
 tree.write(path, encoding='utf-8', xml_declaration=True)
-print('Rendered six official runs, three public comparisons, and ScienceGuru as SVG and PNG.')
+print(f'Rendered {len(official)} official runs, {len(others)} public comparisons, and ScienceGuru as SVG and PNG.')

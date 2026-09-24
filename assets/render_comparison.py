@@ -29,7 +29,6 @@ assert [r['minutes'] for r in rows] == sorted(r['minutes'] for r in rows)
 
 labels = {
     'scienceguru_nc033': ('ScienceGuru', 'AutoTrust · Guru Turbo 1.2'),
-    'pr830_mixed': ('ClimbMix / Cosmopedia', 'Giovanni Zinzi · 3 runs'),
     'pr830_main': ('ClimbMix recipe', 'Giovanni Zinzi · 6 runs'),
     'pr854_hostram': ('Host-RAM n-grams', 'Oriole Networks · 3 runs'),
     'official_run6': ('Official SOTA · Run 6', 'Andrej Karpathy · 5 runs'),
@@ -84,4 +83,4 @@ for tag, ident, text in [('title', 'chart-title', 'ScienceGuru GPT-2 training-ti
     ('desc', 'chart-description', '; '.join(f"{labels[r['id']][0]}: {described_time(r)} minutes, CORE {r['core']:.6f}" for r in rows))]:
     element = ET.Element(f'{{{ns}}}{tag}', {'id': ident}); element.text = text; svg.insert(0, element)
 tree.write(path, encoding='utf-8', xml_declaration=True)
-print('Rendered five GPT-2 comparison rows as SVG and PNG.')
+print(f'Rendered {len(rows)} GPT-2 comparison rows as SVG and PNG.')

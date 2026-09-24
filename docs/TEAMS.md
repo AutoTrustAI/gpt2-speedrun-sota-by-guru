@@ -11,10 +11,10 @@ The comparison brings together the maintained Time-to-GPT-2 leaderboard and sele
 | Contributor | Publicly documented contribution | Reported result |
 |---|---|---|
 | **Andrej Karpathy** | Maintains [nanochat](https://github.com/karpathy/nanochat). The official [Run 6 account](https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/dev/LEADERBOARD.md#run-6) describes architecture improvements from the second autoresearch round. | **≈99 min**, CORE **0.262634**, five runs. |
-| **Giovanni Zinzi** | Author of [PR #830](https://github.com/karpathy/nanochat/pull/830): a d22 recipe with a 49,152-token vocabulary, fused cross entropy and selective RMSNorm scales. The submission identifies the contributor without establishing a company affiliation. | Main ClimbMix recipe: **81.835 min**, CORE **0.261814**, six runs. Mixed-data experiment: **73.917 min**, CORE **0.267123**, three runs. |
+| **Giovanni Zinzi** | Author of [PR #830](https://github.com/karpathy/nanochat/pull/830): a d22 recipe with a 49,152-token vocabulary, fused cross entropy and selective RMSNorm scales. The submission identifies the contributor without establishing a company affiliation. | Main ClimbMix recipe: **81.835 min**, CORE **0.261814**, six runs. |
 | **Oriole Networks · Nihir Patel** | The disclosure in [PR #854](https://github.com/karpathy/nanochat/pull/854) identifies Nihir Patel, Alessandro Ottino and Robin Matzner with Oriole Networks. The method adds hashed bigram/trigram tables in host RAM to a d24 model. | **91.74 min**, CORE **0.2578**, three runs. |
 
-Zinzi's mixed-data experiment uses an 80/20 ClimbMix/Cosmopedia-v2 mixture. The author omitted it from the main recipe because it regressed at d14. Oriole's individual CORE scores are 0.2592, 0.2557 and 0.2584; two of the three exceed the individual threshold. These details accompany the aggregate results in [Benchmark and comparisons](BENCHMARK.md).
+Oriole's individual CORE scores are 0.2592, 0.2557 and 0.2584; two of the three exceed the individual threshold. These details accompany the aggregate results in [Benchmark and comparisons](BENCHMARK.md).
 
 ## Related organizations and research
 

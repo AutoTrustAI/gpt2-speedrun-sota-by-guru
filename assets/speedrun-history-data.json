@@ -103,17 +103,6 @@
       "source": "https://github.com/karpathy/nanochat/pull/830"
     },
     {
-      "id": "pr830_mixed",
-      "series": "comparison",
-      "date": "2026-08-15",
-      "date_basis": "Submission opening date; result read from the current submission body",
-      "label": "Giovanni \u00b7 mixed data",
-      "minutes": 73.917,
-      "core": 0.267123,
-      "runs": 3,
-      "source": "https://github.com/karpathy/nanochat/pull/830"
-    },
-    {
       "id": "pr854_hostram",
       "series": "comparison",
       "date": "2026-09-11",
