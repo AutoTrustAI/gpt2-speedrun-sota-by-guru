@@ -1,6 +1,6 @@
 **AUTOTRUST AI  ·  SCIENCEGURU  ·  RESEARCH**
 
-# New Record: ScienceGuru Cuts the GPT-2 Speedrun to 72.24 Minutes
+# New Record: ScienceGuru Cuts the Official GPT-2 Speedrun from 99 to 72.24 Minutes
 
 Running Guru Turbo 1.2, AutoTrust’s research platform trained a GPT language model past the GPT-2 quality target in 72.24 minutes on eight H100s: approximately 1.37× faster than the official 99-minute record.
 

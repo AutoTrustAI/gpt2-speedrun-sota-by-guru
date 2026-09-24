@@ -1,6 +1,6 @@
 **AUTOTRUST AI  ·  SCIENCEGURU  ·  RESEARCH**
 
-# New Record: ScienceGuru 将 GPT-2 Speedrun 压缩至 72.24 分钟
+# New Record: ScienceGuru 将官方 GPT-2 Speedrun 纪录从 99 分钟缩短至 72.24 分钟
 
 AutoTrust 的科研平台运行 Guru Turbo 1.2，在八张 H100 上用 72.24 分钟将 GPT 语言模型训练到超过 GPT-2 质量门槛：相较官方 99 分钟的纪录，加速约 1.37 倍。
 
