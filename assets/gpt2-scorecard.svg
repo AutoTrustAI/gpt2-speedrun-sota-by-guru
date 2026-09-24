@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="1440pt" height="810pt" viewBox="0 0 1440 810" version="1.1" role="img" aria-labelledby="chart-title chart-description">
+ <desc id="chart-description">ScienceGuru with Guru Turbo 1.2: 72.2419 minutes on 8 H100 GPUs; complete 22-task CORE 0.259212, above 0.256525. Approximately 1.37 times the training speed and 27.03% less training time than the rounded official Run 6 reference of 99 minutes; 1.13 times the training speed of the 81.835-minute ClimbMix recipe. One completed run; 9841 updates, including 9830 timed updates.</desc><title id="chart-title">ScienceGuru Time-to-GPT-2 result scorecard</title><metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 810  L 1440 810  L 1440 0  L 0 0  z " style="fill: #1f4b41" />
+  </g>
+  <g id="patch_2">
+   <path d="M 1126.08 93.15  L 1344.96 93.15  Q 1379.52 93.15 1379.52 73.71  L 1379.52 60.75  Q 1379.52 41.31 1344.96 41.31  L 1126.08 41.31  Q 1091.52 41.31 1091.52 60.75  L 1091.52 73.71  Q 1091.52 93.15 1126.08 93.15  L 1126.08 93.15  z " style="fill: none; stroke: #749083; stroke-linejoin: miter" />
+  </g>
+  <g id="patch_3">
+   <path d="M 731.52 471.42  L 1015.2 471.42  Q 1036.8 471.42 1036.8 459.27  L 1036.8 289.17  Q 1036.8 277.02 1015.2 277.02  L 731.52 277.02  Q 709.92 277.02 709.92 289.17  L 709.92 459.27  Q 709.92 471.42 731.52 471.42  z " style="fill: #2b5148; stroke: #46695f; stroke-linejoin: miter" />
+  </g>
+  <g id="patch_4">
+   <path d="M 1074.24 471.42  L 1357.92 471.42  Q 1379.52 471.42 1379.52 459.27  L 1379.52 289.17  Q 1379.52 277.02 1357.92 277.02  L 1074.24 277.02  Q 1052.64 277.02 1052.64 289.17  L 1052.64 459.27  Q 1052.64 471.42 1074.24 471.42  z " style="fill: #2b5148; stroke: #46695f; stroke-linejoin: miter" />
+  </g>
+  <g id="patch_5">
+   <path d="M 731.52 644.76  L 1015.2 644.76  Q 1036.8 644.76 1036.8 632.61  L 1036.8 491.67  Q 1036.8 479.52 1015.2 479.52  L 731.52 479.52  Q 709.92 479.52 709.92 491.67  L 709.92 632.61  Q 709.92 644.76 731.52 644.76  z " style="fill: #2b5148; stroke: #46695f; stroke-linejoin: miter" />
+  </g>
+  <g id="patch_6">
+   <path d="M 1074.24 644.76  L 1357.92 644.76  Q 1379.52 644.76 1379.52 632.61  L 1379.52 491.67  Q 1379.52 479.52 1357.92 479.52  L 1074.24 479.52  Q 1052.64 479.52 1052.64 491.67  L 1052.64 632.61  Q 1052.64 644.76 1074.24 644.76  z " style="fill: #2b5148; stroke: #46695f; stroke-linejoin: miter" />
+  </g>
+  <g id="line2d_1">
+   <path d="M 67.68 712.8  L 1372.32 712.8  " style="fill: none; stroke: #46695f; stroke-linecap: square" />
+  </g>
+  <g id="text_1">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="67.68" y="68.85" transform="rotate(-0 67.68 68.85)">AUTOTRUST AI  ·  SCIENCEGURU</text>
+  </g>
+  <g id="text_2">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #faf6ec" x="1235.52" y="74.52" transform="rotate(-0 1235.52 74.52)">Time-to-GPT-2</text>
+  </g>
+  <g id="text_3">
+   <text style="font-weight: 700; font-size: 50px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #faf6ec" x="67.68" y="160.38" transform="rotate(-0 67.68 160.38)">ScienceGuru × Guru Turbo 1.2</text>
+  </g>
+  <g id="text_4">
+   <text style="font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="67.68" y="218.7" transform="rotate(-0 67.68 218.7)">GPT language model trained past the GPT-2 quality target on 8×H100.</text>
+  </g>
+  <g id="text_5">
+   <text style="font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="67.68" y="251.1" transform="rotate(-0 67.68 251.1)">Complete 22-task evaluation · CORE target &gt; 0.256525.</text>
+  </g>
+  <g id="text_6">
+   <text style="font-weight: 700; font-size: 155px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #e5c677" x="57.6" y="476.28" transform="rotate(-0 57.6 476.28)">72.24</text>
+  </g>
+  <g id="text_7">
+   <text style="font-weight: 700; font-size: 36px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #e5c677" x="555.84" y="474.66" transform="rotate(-0 555.84 474.66)">min</text>
+  </g>
+  <g id="text_8">
+   <text style="font-weight: 700; font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #faf6ec" x="67.68" y="540.27" transform="rotate(-0 67.68 540.27)">Training time to the GPT-2 quality target</text>
+  </g>
+  <g id="text_9">
+   <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="67.68" y="578.34" transform="rotate(-0 67.68 578.34)">9,841 updates · 9,830 timed updates</text>
+  </g>
+  <g id="text_10">
+   <text style="font-weight: 700; font-size: 42px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #faf6ec" x="737.28" y="341.01" transform="rotate(-0 737.28 341.01)">≈1.37×</text>
+  </g>
+  <g id="text_11">
+   <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="737.28" y="383.94" transform="rotate(-0 737.28 383.94)">faster than official Run 6</text>
+  </g>
+  <g id="text_12">
+   <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #faf6ec" x="737.28" y="415.53" transform="rotate(-0 737.28 415.53)">(≈99 min)</text>
+  </g>
+  <g id="text_13">
+   <text style="font-weight: 700; font-size: 42px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #faf6ec" x="1080" y="341.01" transform="rotate(-0 1080 341.01)">1.13×</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="1080" y="383.94" transform="rotate(-0 1080 383.94)">faster than the ClimbMix</text>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="1080" y="413.1" transform="rotate(-0 1080 413.1)">recipe by Giovanni Zinzi</text>
+  </g>
+  <g id="text_16">
+   <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #faf6ec" x="1080" y="443.07" transform="rotate(-0 1080 443.07)">(81.835 min)</text>
+  </g>
+  <g id="text_17">
+   <text style="font-weight: 700; font-size: 35px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #faf6ec" x="737.28" y="545.94" transform="rotate(-0 737.28 545.94)">0.259212</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="737.28" y="580.77" transform="rotate(-0 737.28 580.77)">complete 22-task CORE</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 15.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="737.28" y="609.93" transform="rotate(-0 737.28 609.93)">above target 0.256525</text>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 700; font-size: 37px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #faf6ec" x="1080" y="545.94" transform="rotate(-0 1080 545.94)">≈27.03%</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 15.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="1080" y="580.77" transform="rotate(-0 1080 580.77)">less training time vs Run 6</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 15.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="1080" y="609.93" transform="rotate(-0 1080 609.93)">≈26.76 minutes saved</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="67.68" y="746.01" transform="rotate(-0 67.68 746.01)">8× H100 80GB · native training timer · one completed run</text>
+  </g>
+  <g id="text_24">
+   <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #faf6ec" x="1372.32" y="746.01" transform="rotate(-0 1372.32 746.01)">github.com/AutoTrustAI/gpt2-speedrun-sota-by-guru</text>
+  </g>
+  <g id="text_25">
+   <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #bed0c5" x="67.68" y="774.36" transform="rotate(-0 67.68 774.36)">Sources: nc033 metrics and public baselines. Official Run 6 time is rounded; derived comparisons are approximate.</text>
+  </g>
+ </g>
+</svg>

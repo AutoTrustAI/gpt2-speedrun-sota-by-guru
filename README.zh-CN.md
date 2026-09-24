@@ -14,9 +14,9 @@ AutoTrust 的科研平台运行 Guru Turbo 1.2，在八张 H100 上用 72.24 分
 
 <a id="performance-comparison"></a>
 
-![ScienceGuru GPT-2 训练时间对比](assets/gpt2-comparison.svg)
+![ScienceGuru 与 Guru Turbo 1.2：72.24 分钟，约为官方 Run 6 训练速度的 1.37 倍，CORE 0.259212，训练时间减少约 27.03%。](assets/gpt2-scorecard.svg)
 
-*8×H100 上报告的训练时间，CORE 均超过 0.256525。ScienceGuru 的成绩来自一次完整运行；其余条目采用各自公布的汇总成绩。[对比数据与来源](docs/BENCHMARK.md#public-comparisons) · [下载 PNG](assets/gpt2-comparison.png)。*
+*8×H100 上的一次完整运行，完成全部 22 项 CORE 任务评估。官方 Run 6 时间经过舍入，因此相关对比为近似值。[下载成绩卡 PNG](assets/gpt2-scorecard.png) · [详细对比图](assets/gpt2-comparison.svg) · [数据与来源](docs/BENCHMARK.md#public-comparisons)。*
 
 ## 为什么选择 GPT-2 speedrun
 
@@ -51,6 +51,10 @@ AutoTrust 的科研平台运行 Guru Turbo 1.2，在八张 H100 上用 72.24 分
 模型采用逐张量 FP8 矩阵计算，周边计算使用 BF16，并沿用 FlashAttention 3、原有的 Liger 融合 softcap 交叉熵以及 Muon/AdamW 优化器实现。注意力窗口模式仍为 SSSL。这些构成了公开方案保留的执行基础；归档对比则在相同更新次数下考察更小 MLP 带来的变化。
 
 训练与模型源码复制自记录中的实验版本。发布材料包含精确配置、依赖版本和源码哈希，以便重建实测方案。[技术方案](docs/STRATEGY.md) · [复现说明](docs/REPRODUCE.md)。
+
+![ScienceGuru 研究流程与三次完整 GPT-2 实验，展示准确训练时间及 CORE 得分。](assets/gpt2-research-loop.svg)
+
+*已记录的实验展示了速度与质量的取舍。在相同的 9,841 次更新下，MLP4864 比 MLP5120 少用 75.32 秒训练时间，两者均达到 CORE 目标。每行对应一次完整运行。[下载流程图 PNG](assets/gpt2-research-loop.png) · [实验结果](docs/RESULTS.md)。*
 
 ## 我们如何核验
 

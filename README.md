@@ -14,9 +14,9 @@ That is approximately **1.37× faster** than the official Run 6 reference of 99 
 
 <a id="performance-comparison"></a>
 
-![ScienceGuru GPT-2 training-time comparison](assets/gpt2-comparison.svg)
+![ScienceGuru and Guru Turbo 1.2: 72.24 minutes, approximately 1.37 times the official Run 6 training speed, CORE 0.259212, and 27.03 percent less training time.](assets/gpt2-scorecard.svg)
 
-*Reported training times on 8×H100, with CORE above 0.256525. ScienceGuru’s result is one completed run; the other entries use their published aggregates. [Comparison data and sources](docs/BENCHMARK.md#public-comparisons) · [Download PNG](assets/gpt2-comparison.png).*
+*One completed run on 8×H100, evaluated on all 22 CORE tasks. Comparisons with the rounded official Run 6 time are approximate. [Download scorecard PNG](assets/gpt2-scorecard.png) · [Detailed comparison](assets/gpt2-comparison.svg) · [Data and sources](docs/BENCHMARK.md#public-comparisons).*
 
 ## Why the GPT-2 speedrun
 
@@ -51,6 +51,10 @@ The explicit iteration count sets the horizon, while `target_param_data_ratio=9.
 The model uses tensorwise FP8 matrix computation with BF16 around it, FlashAttention 3, the original Liger fused softcapped cross entropy, and the original Muon/AdamW optimizer implementation. The attention-window pattern remains SSSL. These are the execution foundations retained by the published recipe; the archived comparison isolates the smaller MLP at the same update count.
 
 The training and model source is copied from the recorded experimental revision. The package includes exact configurations, dependency versions and source hashes so that the measured recipe can be reconstructed. [Technical strategy](docs/STRATEGY.md) · [Reproduction guide](docs/REPRODUCE.md).
+
+![ScienceGuru research workflow and three completed GPT-2 experiments, with exact training times and CORE scores.](assets/gpt2-research-loop.svg)
+
+*The recorded experiments show the speed–quality tradeoff. At 9,841 updates, MLP4864 used 75.32 seconds less training time than MLP5120; both reached the CORE target. Each row is one completed run. [Download workflow PNG](assets/gpt2-research-loop.png) · [Experiment results](docs/RESULTS.md).*
 
 ## How we verified it
 

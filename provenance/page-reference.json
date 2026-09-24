@@ -1,16 +1,20 @@
 {
   "repository": "https://github.com/AutoTrustAI/nanogpt-speedrun-sota-by-guru",
-  "commit": "fcdc062afd12b50684361d04451b5681670bb843",
-  "commit_subject": "Expand AutoTrust and ScienceGuru introductions and focus README on results",
-  "readme_blob": "6233e0dc79210114202d0c8c9fce5d40ae4079e6",
+  "commit": "66418f828a8a747cf1186a7faef4d7bd90e12dd1",
+  "commit_subject": "Publish supplied NanoGPT blog with faithful Chinese translation",
+  "readme_blob": "0bcedcb8aa6a5cc71b28d43998c7b444819c3513",
   "adapted_elements": [
-    "Result-led headline and headline metrics",
-    "Training-time history figure",
-    "AutoTrust, ScienceGuru and Guru Turbo 1.2 introductions",
-    "Consolidated performance comparison",
-    "Contributor backgrounds and benchmark significance",
-    "Warm cream and green chart palette"
+    "Research article structure and bilingual presentation",
+    "Dark green scorecard with gold training-time headline and four metric cards",
+    "Cream historical chart with labelled records and a green final star",
+    "Five-stage research workflow above recorded experiment bars"
   ],
   "benchmark": "nanochat Time-to-GPT-2",
-  "reference_checked_at_utc": "2026-09-24T17:29:42.132192+00:00"
+  "reference_checked_at_utc": "2026-09-24T19:43:30.436052+00:00",
+  "reference_figures": [
+    "assets/blog-nanogpt-scorecard.png",
+    "assets/blog-nanogpt-history.png",
+    "assets/blog-nanogpt-research-loop.png"
+  ],
+  "data_scope": "All GPT-2 figure measurements come from this repository; NanoGPT figures supply visual layout only."
 }
