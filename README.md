@@ -1,86 +1,93 @@
-# ScienceGuru: GPT-2 in 72.2419 minutes — ≈1.37× speedup over the official SOTA
+**AUTOTRUST AI  ·  SCIENCEGURU  ·  RESEARCH**
 
-**AutoTrust's ScienceGuru research platform, using Guru Turbo 1.2, trains a GPT language model past the GPT-2 quality target in 72.2419 minutes on 8×H100.** The complete 22-task CORE score is **0.259212**, above the **0.256525** target. This uses **≈27.03% less training time than the official SOTA of ≈99 minutes**, saving **≈26.76 minutes**. [Results and comparison sources](docs/BENCHMARK.md).
+# ScienceGuru Cuts the GPT-2 Speedrun to 72.24 Minutes
 
-| Training time | Speedup over official SOTA | Training time saved | Complete CORE |
-|---:|---:|---:|---:|
-| **72.2419 min** | **≈1.37×** | **≈27.03%** | **0.259212** |
+Running Guru Turbo 1.2, AutoTrust’s research platform trained a GPT language model past the GPT-2 quality target in 72.24 minutes on eight H100s: approximately 1.37× faster than the official 99-minute record.
 
-The nanochat leaderboard records **six 8×H100 runs** progressing through FP8 training, larger batches, ClimbMix data, and two rounds of autoresearch. The history below places ScienceGuru's result alongside that progression and the leading public comparisons.
+September 25, 2026  ·  ScienceGuru  ·  Guru Turbo 1.2  ·  Time-to-GPT-2
 
-![Time-to-GPT-2 training-time history, from nanochat's six leaderboard runs to ScienceGuru and Guru Turbo 1.2 at 72.2419 minutes.](assets/speedrun-history.svg)
+[中文](README.zh-CN.md)
 
-[Chart data and sources](docs/SPEEDRUN_CHART.md) · [Download history PNG](assets/speedrun-history.png)
+Today we are releasing ScienceGuru’s result on Time-to-GPT-2, the open benchmark that asks how quickly a language model can be trained to match GPT-2’s downstream capability. Running Guru Turbo 1.2, ScienceGuru developed a recipe that reached a complete 22-task CORE score of **0.259212**, above the **0.256525** target, in **72.2419 minutes** on eight H100 GPUs.
 
-[Chinese](README.zh-CN.md) · [Reproduce](docs/REPRODUCE.md) · [Strategy](docs/STRATEGY.md) · [Evidence](docs/EVIDENCE.md) · [Results](docs/RESULTS.md) · [Teams and contributors](docs/TEAMS.md) · [Benchmark protocol](docs/BENCHMARK.md)
+That is approximately **1.37× faster** than the official Run 6 reference of 99 minutes, reducing training time by **27.03%**, or **26.76 minutes**. It is also **1.13× faster** than the 81.835-minute main ClimbMix recipe reported by Giovanni Zinzi and **1.27× faster** than Oriole Networks’ 91.74-minute result. Comparison sources were checked on September 24, 2026; calculations against the rounded official time are approximate. The code, logs, source hashes and verification instructions are open at [github.com/AutoTrustAI/gpt2-speedrun-sota-by-guru](https://github.com/AutoTrustAI/gpt2-speedrun-sota-by-guru).
 
-## AutoTrust, ScienceGuru, and Guru Turbo 1.2
+<a id="performance-comparison"></a>
 
-### AutoTrust
+![ScienceGuru GPT-2 training-time comparison](assets/gpt2-comparison.svg)
 
-[**AutoTrust**](https://autotrust.ai/about) is an applied AI research laboratory based in Singapore, developing AI systems for scientific research. Its work spans scientific agents, sustained research tasks, self-improving coding agents, and AI scientists. The lab connects real research workflows with model training, inference, and agent orchestration to build more capable research systems.
+*Reported training times on 8×H100, with CORE above 0.256525. ScienceGuru’s result is one completed run; the other entries use their published aggregates. [Comparison data and sources](docs/BENCHMARK.md#public-comparisons) · [Download PNG](assets/gpt2-comparison.png).*
 
-### ScienceGuru
+## Why the GPT-2 speedrun
 
-[**ScienceGuru**](https://scienceguru.ai/) is AutoTrust's research workspace for scientific exploration, reading, reasoning, and writing, available on the web and desktop. It brings research models into an ongoing workspace where ideas can be developed into experiments. This project applies that workflow to GPT pretraining: investigating bottlenecks, implementing candidate strategies, running experiments, and evaluating the resulting models.
+The speedrun fixes the hardware and the target: train on one 8×H100 node until the model exceeds GPT-2’s reference CORE of 0.256525. CORE combines performance across 22 tasks, adjusted for each task’s random baseline. Reaching the target requires both a fast training system and a model that learns enough from the data. Architecture, numerical precision, GPU kernels, memory use and convergence all affect the result.
 
-### Guru Turbo 1.2
+The benchmark is maintained by [Andrej Karpathy in nanochat](https://github.com/karpathy/nanochat). Its six official runs chart improvements through FP8 training, larger batches, ClimbMix data and two rounds of autoresearch. The latest official reference in this comparison is Run 6, at about 99 minutes and CORE 0.262634.
 
-**Guru Turbo 1.2** is the model used for the research and coding work in this ScienceGuru project. AutoTrust's [**Guru family**](https://autotrust.ai/models) includes Nano, Pro, and Turbo tiers for scientific-agent workloads and sustained research tasks. Here, Guru Turbo 1.2 develops the training strategy; the benchmark measures the GPT language model implemented in [`nanochat/`](nanochat/). [Project attribution](provenance/project-attribution.json).
+Public contributors have pushed the system further. [Giovanni Zinzi’s main recipe](https://github.com/karpathy/nanochat/pull/830) reports fused cross entropy, selective RMSNorm scales and a 49,152-token speedrun vocabulary. [Nihir Patel, Alessandro Ottino and Robin Matzner at Oriole Networks](https://github.com/karpathy/nanochat/pull/854) explore a host-memory n-gram table. Their results provide additional points of comparison for reaching the same quality threshold. [Contributor backgrounds and sources](docs/TEAMS.md).
 
-The strategy uses a 22-layer GPT with a compact feed-forward network, an explicit training horizon, FP8 execution, FlashAttention 3, and fused cross entropy. Together, these reduce the work per update and the time needed to reach the downstream quality target. [Technical strategy](docs/STRATEGY.md).
+![Time-to-GPT-2 training-time history](assets/speedrun-history.svg)
 
-## Measured result
+*Six official nanochat runs, leading public comparisons and ScienceGuru’s result. The official reference is reported in rounded minutes. [History data and sources](docs/SPEEDRUN_CHART.md) · [Download PNG](assets/speedrun-history.png).*
 
-**AutoTrust · ScienceGuru · Guru Turbo 1.2** achieved **72.2419 minutes** with **9,841 training updates** and a complete **22-task CORE of 0.259212**. This is a fresh seed 42 run on **8×H100 80GB**. Independent evaluation gives **0.724029 validation bits per byte**.
+## What ScienceGuru changed
 
-The native `total_training_time` is **4,334.512382 seconds**, covering **9,830 timed updates**. The training loop excludes its first eleven update records, evaluation, logging, and checkpoint writing from that timer. See the [timing protocol](docs/BENCHMARK.md#core-and-timing).
+The result comes from matching model capacity and the training horizon to the quality target while retaining the existing fast execution path. ScienceGuru’s published recipe uses a 22-layer GPT, narrows the feed-forward network, and trains for 9,841 updates. The repository preserves the earlier completed experiments alongside the fastest qualifying result, so the speed and quality tradeoff can be inspected directly.
 
-[Full result and configuration](results/nc033/) · [Experiment history](results/experiments.json) · [Evidence guide](docs/EVIDENCE.md)
+### 1. Reducing the feed-forward width
 
-## Performance comparison
+The final model keeps 22 transformer layers, a model width of 1,408, 11 attention heads, a 49,152-token vocabulary and a 2,048-token context. The change is in the MLP: its hidden width falls from 5,120 to 4,864. That removes **15,859,712 parameters** and approximately **2.56% of estimated per-token FLOPs**. The resulting model has 1,375,503,474 parameters.
 
-Results checked on **2026-09-24 UTC**, for **8×H100 / CORE >0.256525**, ordered by training time. Each reference uses its reported time and run count; ScienceGuru uses the completed seed 42 result. The official 99-minute reference is rounded.
+At the same 9,841-update horizon, the recorded MLP5120 run took **73.4972 minutes**, while MLP4864 took **72.2419 minutes**, saving **75.32 seconds**. CORE changed from 0.263907 to 0.259212, still above the target; validation bits per byte changed from 0.723137 to 0.724029. The improvement trades some measured quality margin for lower training time. [Complete experiment results](docs/RESULTS.md).
 
-![GPT-2 training-time comparison: ScienceGuru 72.2419 minutes, Giovanni's ClimbMix recipe 81.835, Oriole Networks 91.74, and official Run 6 approximately 99 minutes.](assets/gpt2-comparison.svg)
+### 2. Setting an explicit training horizon
 
-[Download comparison PNG](assets/gpt2-comparison.png) · [Comparison data](assets/comparison-data.json) · [Sources and protocol](docs/BENCHMARK.md)
+The recipe trains for **9,841 updates**, processing **5,159,518,208 tokens**. Each update uses a global batch of 524,288 tokens, with 32 sequences per GPU. Training uses 170 ClimbMix shards and the original held-out validation shard.
 
-| Strategy | Team / contributor | Training time | CORE | Runs | ScienceGuru speedup |
-|---|---|---:|---:|---:|---:|
-| **ScienceGuru, MLP4864** | **AutoTrust · Guru Turbo 1.2** | **72.2419 min** | **0.259212** | **1** | — |
-| [ClimbMix recipe](https://github.com/karpathy/nanochat/pull/830) | Giovanni Zinzi | **81.835 min** | 0.261814 | 6 | **1.133×** |
-| [Host-RAM n-grams](https://github.com/karpathy/nanochat/pull/854) | Oriole Networks · Nihir Patel and collaborators | **91.74 min** | 0.2578 | 3 | **1.270×** |
-| [**Official SOTA — Run 6**](https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/dev/LEADERBOARD.md#run-6) | Andrej Karpathy | **≈99 min** | 0.262634 | 5 | **≈1.370×** |
+The explicit iteration count sets the horizon, while `target_param_data_ratio=9.20` remains an input to the original hyperparameter scaling. The schedule uses 40 warmup steps, a 0.65 warmdown fraction and a final learning-rate fraction of 0.05. Weight decay and the optimizer equations stay unchanged. [Exact recipe and launch arguments](reproduction/recipes.json).
 
-Against the official Run 6 reference, ScienceGuru saves **≈26.76 minutes**, a **≈1.370× speedup**. The model is trained on ClimbMix with the original tokenizer and complete downstream evaluation. [Comparison details](docs/BENCHMARK.md#public-comparisons).
+### 3. Retaining the fast execution path
 
-## Background of the leading contributors
+The model uses tensorwise FP8 matrix computation with BF16 around it, FlashAttention 3, the original Liger fused softcapped cross entropy, and the original Muon/AdamW optimizer implementation. The attention-window pattern remains SSSL. These are the execution foundations retained by the published recipe; the archived comparison isolates the smaller MLP at the same update count.
 
-| Contributor | Public background | Result in this comparison |
-|---|---|---|
-| **Andrej Karpathy** | Creator and maintainer of [nanochat](https://github.com/karpathy/nanochat); the latest official run incorporates a second round of autoresearch. | **≈99 min** |
-| **Giovanni Zinzi** | Author of [#830](https://github.com/karpathy/nanochat/pull/830), which reports fused cross entropy, selective RMSNorm scales, and a 49,152-token speedrun vocabulary. | **81.835 min** |
-| **Oriole Networks · Nihir Patel and collaborators** | [#854](https://github.com/karpathy/nanochat/pull/854) names Nihir Patel, Alessandro Ottino, and Robin Matzner at Oriole Networks. | **91.74 min** |
+The training and model source is copied from the recorded experimental revision. The package includes exact configurations, dependency versions and source hashes so that the measured recipe can be reconstructed. [Technical strategy](docs/STRATEGY.md) · [Reproduction guide](docs/REPRODUCE.md).
 
-[Recursive](https://github.com/recursive-org/first-steps-toward-automated-ai-research/tree/main/nanochat_autoresearch) also publishes NanoChat autoresearch experiments, reporting **0.9109 mean validation BPB** over ten seeds on one B200 with a five-minute budget. That experiment uses a different hardware and evaluation protocol. [Teams, contributions, and related work](docs/TEAMS.md).
+## How we verified it
 
-## What this benchmark establishes
+Speed results are easy to get wrong, so the package is built to be checked:
 
-Time-to-GPT-2 measures **training time to a fixed downstream capability target**. Reaching the target requires model capacity, data quality, and convergence as well as fast GPU execution. The benchmark exercises architecture design, precision choices, GPU kernels, distributed communication, memory use, and reproducible experimentation.
+- **Complete downstream evaluation.** The checkpoint is restored with the same MLP4864 configuration and evaluated on every example in all 22 CORE tasks using `--max-per-task=-1`. The resulting CORE is 0.259212. Standard BPB evaluation uses 20,971,520 tokens per split and gives validation BPB of 0.724029. The individual task scores, including declines, are preserved.
 
-Its research value is the link between systems speed and model capability: an optimization succeeds when it produces a sufficiently capable GPT model sooner. The official history includes improvements discovered through autoresearch, making it a concrete setting for studying AI-assisted training research. [Benchmark significance and CORE evaluation](docs/BENCHMARK.md).
+- **The native timing boundary.** The original `total_training_time` is **4,334.512382 seconds**, covering **9,830 timed updates** out of 9,841. The first eleven update records, evaluation, logging and checkpoint writing are outside that timer. Setup, tokenizer preparation and final evaluation add time to a complete reproduction.
 
-## What is included
+- **Recorded experiments.** The published result is one completed seed 42 run, nc033. The package also retains the two earlier completed MLP5120 experiments, nc027 and nc029, with their configurations, full CORE results and native metric lines. No projected result is included in the measured table.
 
-- [`nanochat/`](nanochat/) and [`scripts/`](scripts/): the frozen training, model, tokenizer, and evaluation implementation.
-- [`reproduction/source-manifest.json`](reproduction/source-manifest.json): hashes for 22 preserved source, license, and dependency files.
-- [`results/`](results/): three completed experiments, per-task CORE scores, native training logs, and evaluation metrics.
-- [`docs/REPRODUCE.md`](docs/REPRODUCE.md): environment, dataset, and launch instructions for the 9,841-update recipe.
-- [`docs/EVIDENCE.md`](docs/EVIDENCE.md): source identity, result files, and verification commands.
+- **Pinned source and artifacts.** The source manifest identifies 22 unchanged source, license and dependency files from revision `a72e2f4b16595a3409edc39b00e07e22bee45c09`. Separate manifests record hashes of the published results and reproduction package. Run `python3 reproduction/verify.py source` to check the frozen source on a CPU; the [evidence guide](docs/EVIDENCE.md#verify-the-published-package) includes the artifact checks.
 
-The reference hardware is **8× NVIDIA H100 80GB**. Training uses **170 ClimbMix shards**, a held-out validation shard, a **49,152-token** tokenizer, sequences of **2,048 tokens**, and a global batch of **524,288 tokens**. Follow [Reproduce](docs/REPRODUCE.md) to install the recorded dependencies, prepare the inputs, train from scratch, and run complete CORE and BPB evaluation.
+## Scope and caveats
 
-## Credits and license
+- This is one qualifying run selected from recipe development. It does not establish variability across repeated runs. The comparison recipes report their own run counts and aggregates, and their final CORE scores differ.
 
-Built on [karpathy/nanochat](https://github.com/karpathy/nanochat). Upstream copyright and the MIT license are retained in [LICENSE](LICENSE) and [NOTICE](NOTICE). [Source and dependency attribution](NOTICE) · [ScienceGuru project attribution](provenance/project-attribution.json).
+- The reported figure measures the native training interval. It does not include the full research process or the entire time required to prepare inputs, train and evaluate from scratch.
+
+- The input manifest records training-shard names and sizes, with hashes for held-out data, tokenizer artifacts and evaluation files. Full training-shard content hashes were not recorded, and the external FlashAttention 3 binary revision is not pinned by the dependency lock.
+
+- The measurements come from the original archived runs. The portable launch scripts have passed static and describe-mode checks; their end-to-end GPU execution remains to be validated. Dataset contents, tokenizer artifacts, trained weights and compiled kernel caches are obtained or produced during reproduction.
+
+## What’s next
+
+The release makes the next checks concrete: reproduce the frozen recipe from scratch, run the complete downstream evaluation and measure how the result varies across fresh runs. The source manifests, launch commands and individual task scores give other researchers the materials to inspect both training efficiency and the quality margin above the target.
+
+AutoTrust is an applied AI research laboratory based in Singapore, working on scientific agents, sustained research tasks and self-improving coding agents. Its ScienceGuru workspace brings research models into literature reading, scientific reasoning, writing and experimentation. Guru Turbo 1.2 is the model used for the research and coding in this project; the reported 72.24 minutes measures the GPT model’s training recipe. [AutoTrust](https://autotrust.ai/about) · [Guru models](https://autotrust.ai/models) · [Project attribution](provenance/project-attribution.json).
+
+### SCIENCEGURU
+
+Put the system behind this result to work on your own research. Download ScienceGuru at [ScienceGuru.ai](https://scienceguru.ai).
+
+[Download ScienceGuru →](https://scienceguru.ai)
+
+Code, logs and verification: [github.com/AutoTrustAI/gpt2-speedrun-sota-by-guru](https://github.com/AutoTrustAI/gpt2-speedrun-sota-by-guru)
+
+Community records: [karpathy/nanochat — Time-to-GPT-2](https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/dev/LEADERBOARD.md). Official times are taken from the recorded leaderboard reference.
+
+Built on [karpathy/nanochat](https://github.com/karpathy/nanochat). Upstream copyright and the MIT license are retained in [LICENSE](LICENSE) and [NOTICE](NOTICE).

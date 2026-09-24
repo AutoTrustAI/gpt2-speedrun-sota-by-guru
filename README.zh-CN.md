@@ -1,86 +1,93 @@
-# ScienceGuru：72.2419 分钟达到 GPT-2 能力，较官方 SOTA 加速约 1.37 倍
+**AUTOTRUST AI  ·  SCIENCEGURU  ·  RESEARCH**
 
-**AutoTrust 的 ScienceGuru 科研平台，使用 Guru Turbo 1.2，在 8×H100 上用 72.2419 分钟训练出超过 GPT-2 质量门槛的 GPT 语言模型。** 完整 22 项 CORE 得分为 **0.259212**，超过 **0.256525** 的门槛。相对官方 SOTA 的约 **99 分钟**，训练时间减少约 **27.03%**，节省约 **26.76 分钟**。[成绩与对比来源](docs/BENCHMARK.md)。
+# ScienceGuru 将 GPT-2 Speedrun 压缩至 72.24 分钟
 
-| 训练时间 | 相对官方 SOTA 的加速比 | 训练时间减少 | 完整 CORE |
-|---:|---:|---:|---:|
-| **72.2419 分钟** | **约 1.37×** | **约 27.03%** | **0.259212** |
+AutoTrust 的科研平台运行 Guru Turbo 1.2，在八张 H100 上用 72.24 分钟将 GPT 语言模型训练到超过 GPT-2 质量门槛：相较官方 99 分钟的纪录，加速约 1.37 倍。
 
-nanochat 官方榜单收录了 **6 次 8×H100 运行纪录**，依次通过 FP8、更大批量、ClimbMix 数据和两轮 autoresearch 提高训练效率。下图将 ScienceGuru 的成绩与这段优化历程及主要公开方案放在一起。
+2026 年 9 月 25 日  ·  ScienceGuru  ·  Guru Turbo 1.2  ·  Time-to-GPT-2
 
-![Time-to-GPT-2 训练时间历史：从 nanochat 的六次榜单纪录到 ScienceGuru + Guru Turbo 1.2 的 72.2419 分钟。](assets/speedrun-history.svg)
+[English](README.md)
 
-[图表数据与来源](docs/SPEEDRUN_CHART.md) · [下载历史图 PNG](assets/speedrun-history.png)
+今天，我们发布 ScienceGuru 在 Time-to-GPT-2 上的成绩。这个开放基准考察的是：训练出具备 GPT-2 下游能力的语言模型，最快需要多久。ScienceGuru 运行 Guru Turbo 1.2，开发出一套训练方案，在八张 H100 GPU 上用 **72.2419 分钟**达到完整 22 项任务 **0.259212 的 CORE 得分**，超过 **0.256525** 的目标。
 
-[English](README.md) · [复现说明](docs/REPRODUCE.md) · [技术方案](docs/STRATEGY.md) · [实验材料](docs/EVIDENCE.md) · [完整成绩](docs/RESULTS.md) · [团队与贡献者](docs/TEAMS.md) · [评测规则](docs/BENCHMARK.md)
+相较官方 Run 6 的 99 分钟参考成绩，这一结果**加速约 1.37 倍**，训练时间减少 **27.03%**，即 **26.76 分钟**。其训练速度也是 Giovanni Zinzi 报告的 81.835 分钟 ClimbMix 主方案的 **1.13 倍**、Oriole Networks 的 91.74 分钟方案的 **1.27 倍**。对比来源核对于 2026 年 9 月 24 日；由于官方时间经过舍入，以它为基准的计算均为近似值。代码、日志、源码哈希与核验说明已公开在 [github.com/AutoTrustAI/gpt2-speedrun-sota-by-guru](https://github.com/AutoTrustAI/gpt2-speedrun-sota-by-guru)。
 
-## AutoTrust、ScienceGuru 与 Guru Turbo 1.2
+<a id="performance-comparison"></a>
 
-### AutoTrust
+![ScienceGuru GPT-2 训练时间对比](assets/gpt2-comparison.svg)
 
-[**AutoTrust**](https://autotrust.ai/about) 是位于新加坡的应用 AI 研究实验室，致力于开发服务科学研究的 AI 系统，研究方向包括科学智能体、持续科研任务、自我改进的编程智能体和 AI 科学家。实验室将真实科研工作流与模型训练、推理和智能体协作相结合，提升研究系统的能力。
+*8×H100 上报告的训练时间，CORE 均超过 0.256525。ScienceGuru 的成绩来自一次完整运行；其余条目采用各自公布的汇总成绩。[对比数据与来源](docs/BENCHMARK.md#public-comparisons) · [下载 PNG](assets/gpt2-comparison.png)。*
 
-### ScienceGuru
+## 为什么选择 GPT-2 speedrun
 
-[**ScienceGuru**](https://scienceguru.ai/) 是 AutoTrust 的科研工作空间，支持网页版和桌面端，将科研模型用于探索、阅读、推理和写作。在本项目中，ScienceGuru 将这一工作方式用于 GPT 预训练：分析瓶颈、实现候选方案、运行实验，再评估训练所得模型。
+这个 speedrun 固定了硬件与目标：在一台 8×H100 节点上训练，直到模型超过 GPT-2 的参考 CORE 得分 0.256525。CORE 汇总 22 项任务的表现，并根据各任务的随机基线进行调整。达到目标既需要高效的训练系统，也需要模型从数据中学到足够的能力。架构、数值精度、GPU kernel、内存使用和收敛速度都会影响成绩。
 
-### Guru Turbo 1.2
+这一基准由 [Andrej Karpathy 在 nanochat 中维护](https://github.com/karpathy/nanochat)。六次官方运行记录展示了通过 FP8 训练、更大批量、ClimbMix 数据以及两轮 autoresearch 实现的改进。本次对比采用的最新官方参考是 Run 6，用时约 99 分钟，CORE 为 0.262634。
 
-**Guru Turbo 1.2** 是本次 ScienceGuru 项目中负责研究和编程的模型。AutoTrust 的 [**Guru 系列**](https://autotrust.ai/models) 包含 Nano、Pro 和 Turbo，面向科学智能体工作负载与持续科研任务。本项目由 Guru Turbo 1.2 开发训练方案；benchmark 测量的是 [`nanochat/`](nanochat/) 中 GPT 语言模型的训练成绩。[项目归属说明](provenance/project-attribution.json)。
+社区贡献者进一步推进了这一系统。[Giovanni Zinzi 的主方案](https://github.com/karpathy/nanochat/pull/830) 报告了融合交叉熵、选择性 RMSNorm 缩放以及 49,152 token 的 speedrun 词表。[Oriole Networks 的 Nihir Patel、Alessandro Ottino 和 Robin Matzner](https://github.com/karpathy/nanochat/pull/854) 则探索了驻留主机内存的 n-gram 表。他们的成绩为达到同一质量门槛提供了更多对比参照。[贡献者背景与来源](docs/TEAMS.md)。
 
-方案采用 22 层 GPT、较紧凑的前馈网络、明确的训练步数，以及 FP8、FlashAttention 3 和融合交叉熵，减少每步计算量及达到能力门槛所需的训练时间。[技术方案](docs/STRATEGY.md)。
+![Time-to-GPT-2 训练时间历史](assets/speedrun-history.svg)
 
-## 实测成绩
+*nanochat 的六次官方运行记录、领先的公开对比方案以及 ScienceGuru 的成绩。官方参考时间以舍入后的分钟数报告。[历史数据与来源](docs/SPEEDRUN_CHART.md) · [下载 PNG](assets/speedrun-history.png)。*
 
-**AutoTrust · ScienceGuru · Guru Turbo 1.2** 在 **8×H100 80GB** 上，从头训练 seed 42，完成 **9841 次更新**，用时 **72.2419 分钟**，完整 **22 项 CORE 为 0.259212**。独立评估得到的验证集 BPB 为 **0.724029**。
+## ScienceGuru 改了什么
 
-原生 `total_training_time` 为 **4334.512382 秒**，包含 **9830 次计时更新**。训练循环将最初 11 次更新记录、评估、日志与 checkpoint 写入排除在这一计时之外。[计时规则](docs/BENCHMARK.md#core-and-timing)。
+这一结果来自让模型容量与训练步数适配质量目标，同时保留已有的快速执行路径。ScienceGuru 公开的方案采用 22 层 GPT，缩小前馈网络，并训练 9,841 次更新。仓库保留了此前完成的实验及最快达到门槛的结果，因此可以直接检查速度与质量之间的取舍。
 
-[完整结果与配置](results/nc033/) · [机器可读实验历史](results/experiments.json) · [实验材料说明](docs/EVIDENCE.md)
+### 1. 缩小前馈网络宽度
 
-## 成绩对比
+最终模型保留了 22 层 Transformer、1,408 的模型宽度、11 个注意力头、49,152 token 的词表以及 2,048 token 的上下文。变化发生在 MLP：隐藏层宽度从 5,120 降至 4,864。这减少了 **15,859,712 个参数**，以及约 **2.56% 的单 token 估算浮点运算量**。调整后的模型共有 1,375,503,474 个参数。
 
-以下结果核对于 **2026-09-24 UTC**，使用 **8×H100 / CORE >0.256525**，按训练时间排序。各方案采用来源报告的时间与运行次数；ScienceGuru 使用已完成的 seed 42 成绩。官方约 99 分钟为经过舍入的数值。
+在相同的 9,841 次更新下，记录中的 MLP5120 运行用时 **73.4972 分钟**，MLP4864 用时 **72.2419 分钟**，节省 **75.32 秒**。CORE 从 0.263907 变为 0.259212，仍高于目标；验证集每字节比特数（BPB）从 0.723137 变为 0.724029。这一改进用一部分实测质量余量换取更短的训练时间。[完整实验结果](docs/RESULTS.md)。
 
-![GPT-2 训练时间对比：ScienceGuru 72.2419 分钟、ClimbMix 方案 81.835 分钟、Oriole Networks 91.74 分钟、官方 Run 6 约 99 分钟。](assets/gpt2-comparison.svg)
+### 2. 明确训练步数
 
-[下载对比图 PNG](assets/gpt2-comparison.png) · [对比数据](assets/comparison-data.json) · [来源与规则](docs/BENCHMARK.md)
+方案训练 **9,841 次更新**，处理 **5,159,518,208 个 token**。每次更新的全局批量为 524,288 token，每张 GPU 使用 32 条序列。训练采用 170 个 ClimbMix 分片和原有的独立验证分片。
 
-| 方案 | 团队 / 作者 | 训练时间 | CORE | 运行次数 | ScienceGuru 加速比 |
-|---|---|---:|---:|---:|---:|
-| **ScienceGuru，MLP4864** | **AutoTrust · Guru Turbo 1.2** | **72.2419 分钟** | **0.259212** | **1** | — |
-| [ClimbMix 方案](https://github.com/karpathy/nanochat/pull/830) | Giovanni Zinzi | **81.835 分钟** | 0.261814 | 6 | **1.133×** |
-| [主机内存 n-gram](https://github.com/karpathy/nanochat/pull/854) | Oriole Networks · Nihir Patel 等 | **91.74 分钟** | 0.2578 | 3 | **1.270×** |
-| [**官方 SOTA — Run 6**](https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/dev/LEADERBOARD.md#run-6) | Andrej Karpathy | **约 99 分钟** | 0.262634 | 5 | **约 1.370×** |
+显式指定的迭代次数决定训练长度，`target_param_data_ratio=9.20` 仍作为原有超参数缩放规则的输入。训练调度使用 40 步预热、0.65 的学习率下降阶段比例，以及 0.05 的最终学习率比例。权重衰减和优化器公式保持不变。[精确方案与启动参数](reproduction/recipes.json)。
 
-相对官方 Run 6，ScienceGuru 节省约 **26.76 分钟**，加速约 **1.370 倍**。本方案使用 ClimbMix、原 tokenizer 和完整下游评估。[对比说明](docs/BENCHMARK.md#public-comparisons)。
+### 3. 保留快速执行路径
 
-## 主要贡献者背景
+模型采用逐张量 FP8 矩阵计算，周边计算使用 BF16，并沿用 FlashAttention 3、原有的 Liger 融合 softcap 交叉熵以及 Muon/AdamW 优化器实现。注意力窗口模式仍为 SSSL。这些构成了公开方案保留的执行基础；归档对比则在相同更新次数下考察更小 MLP 带来的变化。
 
-| 贡献者 | 公开背景 | 本页对比成绩 |
-|---|---|---|
-| **Andrej Karpathy** | [nanochat](https://github.com/karpathy/nanochat) 的创建者与维护者；最新官方成绩采用第二轮 autoresearch 的改进。 | **约 99 分钟** |
-| **Giovanni Zinzi** | [#830](https://github.com/karpathy/nanochat/pull/830) 的作者，方案涉及融合交叉熵、选择性 RMSNorm 缩放和 49152 词表。 | **81.835 分钟** |
-| **Oriole Networks · Nihir Patel 等** | [#854](https://github.com/karpathy/nanochat/pull/854) 明确列出 Nihir Patel、Alessandro Ottino 和 Robin Matzner 的 Oriole Networks 归属。 | **91.74 分钟** |
+训练与模型源码复制自记录中的实验版本。发布材料包含精确配置、依赖版本和源码哈希，以便重建实测方案。[技术方案](docs/STRATEGY.md) · [复现说明](docs/REPRODUCE.md)。
 
-[Recursive](https://github.com/recursive-org/first-steps-toward-automated-ai-research/tree/main/nanochat_autoresearch) 也公开了 NanoChat autoresearch 实验：单张 B200、五分钟预算、10 个 seed 的平均验证 BPB 为 **0.9109**，采用另一套硬件和评测规则。[团队、贡献与相关研究](docs/TEAMS.md)。
+## 我们如何核验
 
-## 这个 benchmark 考察什么
+速度结果很容易出错，因此发布材料按可核验的方式组织：
 
-Time-to-GPT-2 衡量**达到固定下游能力门槛所需的训练时间**。模型容量、数据质量、收敛速度和 GPU 执行效率共同决定成绩，涉及架构设计、数值精度、GPU kernel、分布式通信、显存使用和可复现实验。
+- **完整下游评估。** 使用相同的 MLP4864 配置恢复 checkpoint，并通过 `--max-per-task=-1` 对全部 22 项 CORE 任务中的所有样本进行评估，得到 CORE 0.259212。标准 BPB 评估在每个数据划分上使用 20,971,520 个 token，得到验证集 BPB 0.724029。所有单项任务得分均予保留，包括表现下降的项目。
 
-它的价值在于把系统速度与模型能力联系起来：优化需要让足够强的 GPT 模型更早训练完成。官方纪录中包含 autoresearch 自动发现的改进，也让它成为研究 AI 辅助训练优化的具体实验场景。[评测意义与 CORE 规则](docs/BENCHMARK.md)。
+- **原生计时边界。** 原始 `total_training_time` 为 **4,334.512382 秒**，覆盖 9,841 次更新中的 **9,830 次计时更新**。最初 11 次更新记录、评估、日志和 checkpoint 写入不在这一计时内。完整复现还需额外的环境准备、tokenizer 准备和最终评估时间。
 
-## 仓库内容
+- **已记录的实验。** 公开成绩来自一次完整的 seed 42 运行 nc033。材料还保留了此前完成的两次 MLP5120 实验 nc027 和 nc029，包括它们的配置、完整 CORE 结果与原生指标记录。实测表中不包含推算成绩。
 
-- [`nanochat/`](nanochat/) 和 [`scripts/`](scripts/)：冻结的模型、训练、tokenizer 与评估实现。
-- [`reproduction/source-manifest.json`](reproduction/source-manifest.json)：22 个保留源文件、许可证和依赖文件的哈希。
-- [`results/`](results/)：三次完整实验、逐项 CORE、原生训练日志和评估指标。
-- [`docs/REPRODUCE.md`](docs/REPRODUCE.md)：9841 步方案的环境、数据与启动说明。
-- [`docs/EVIDENCE.md`](docs/EVIDENCE.md)：源码版本、实验文件与核验命令。
+- **固定的源码与文件。** 源码清单标识了实验版本 `a72e2f4b16595a3409edc39b00e07e22bee45c09` 中 22 个未经修改的源码、许可证和依赖文件。另有清单记录公开结果及复现包的哈希。运行 `python3 reproduction/verify.py source` 即可在 CPU 上核验冻结源码；[证据说明](docs/EVIDENCE.md#verify-the-published-package)还提供了实验文件的检查方法。
 
-参考硬件为 **8× NVIDIA H100 80GB**。训练使用 **170 个 ClimbMix 数据分片**、独立验证分片、**49152 词表**、**2048 token 序列**和 **524288 token 全局批量**。[复现说明](docs/REPRODUCE.md)包含依赖安装、输入准备、从头训练和完整 CORE/BPB 评估步骤。
+## 范围与限制
 
-## 致谢与许可证
+- 这是从方案开发过程中选出的一次达标运行，不能据此确定重复运行之间的波动。对比方案报告了各自的运行次数与汇总方式，最终 CORE 得分也有所不同。
 
-基于 [karpathy/nanochat](https://github.com/karpathy/nanochat)，在 [LICENSE](LICENSE) 和 [NOTICE](NOTICE) 中保留上游版权及 MIT 许可证。[源码与依赖归属](NOTICE) · [ScienceGuru 项目归属](provenance/project-attribution.json)。
+- 报告的时间衡量原生训练区间，不包含完整研究过程，也不包含从头准备输入、训练和评估所需的全部时间。
+
+- 输入清单记录了训练分片的名称与大小，并提供了独立验证数据、tokenizer 文件和评估文件的哈希。完整训练分片的内容哈希未被记录，依赖锁文件也未固定外部 FlashAttention 3 二进制文件的版本。
+
+- 测量值来自原始归档运行。可移植启动脚本已通过静态检查和 describe 模式检查，其端到端 GPU 执行仍有待验证。数据集内容、tokenizer 文件、训练权重和编译后的 kernel 缓存需要在复现过程中获取或生成。
+
+## 接下来
+
+这次发布使后续核验有了明确的起点：从头复现冻结的方案，运行完整下游评估，并测量全新运行之间的结果波动。源码清单、启动命令和单项任务得分，为其他研究者检查训练效率以及超出目标的质量余量提供了材料。
+
+AutoTrust 是位于新加坡的应用 AI 研究实验室，研究方向包括科学智能体、持续科研任务和自我改进的编程智能体。旗下 ScienceGuru 工作空间将科研模型用于文献阅读、科学推理、写作与实验。Guru Turbo 1.2 是本项目研究和编程使用的模型；报告的 72.24 分钟衡量的是 GPT 模型训练方案的用时。[AutoTrust](https://autotrust.ai/about) · [Guru 模型](https://autotrust.ai/models) · [项目归属说明](provenance/project-attribution.json)。
+
+### SCIENCEGURU
+
+将创造这一结果的系统用于你自己的研究。前往 [ScienceGuru.ai](https://scienceguru.ai) 下载 ScienceGuru。
+
+[下载 ScienceGuru →](https://scienceguru.ai)
+
+代码、日志与核验：[github.com/AutoTrustAI/gpt2-speedrun-sota-by-guru](https://github.com/AutoTrustAI/gpt2-speedrun-sota-by-guru)
+
+社区纪录：[karpathy/nanochat — Time-to-GPT-2](https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/dev/LEADERBOARD.md)。官方时间取自记录中的榜单参考版本。
+
+基于 [karpathy/nanochat](https://github.com/karpathy/nanochat)。上游版权及 MIT 许可证保留在 [LICENSE](LICENSE) 和 [NOTICE](NOTICE) 中。
