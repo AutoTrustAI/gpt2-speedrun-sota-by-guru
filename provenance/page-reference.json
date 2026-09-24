@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/AutoTrustAI/nanogpt-speedrun-sota-by-guru",
+  "commit": "fcdc062afd12b50684361d04451b5681670bb843",
+  "commit_subject": "Expand AutoTrust and ScienceGuru introductions and focus README on results",
+  "readme_blob": "6233e0dc79210114202d0c8c9fce5d40ae4079e6",
+  "adapted_elements": [
+    "Result-led headline and headline metrics",
+    "Training-time history figure",
+    "AutoTrust, ScienceGuru and Guru Turbo 1.2 introductions",
+    "Consolidated performance comparison",
+    "Contributor backgrounds and benchmark significance",
+    "Warm cream and green chart palette"
+  ],
+  "benchmark": "nanochat Time-to-GPT-2",
+  "reference_checked_at_utc": "2026-09-24T17:29:42.132192+00:00"
+}

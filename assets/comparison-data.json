@@ -1,0 +1,56 @@
+{
+  "hardware": "8 x H100",
+  "unit": "minutes",
+  "core_target": 0.256525,
+  "points": [
+    {
+      "id": "scienceguru_nc033",
+      "label": "ScienceGuru",
+      "team": "AutoTrust \u00b7 Guru Turbo 1.2",
+      "minutes": 72.2418730378151,
+      "core": 0.259212,
+      "runs": 1,
+      "source": "../results/nc033/metrics.json"
+    },
+    {
+      "id": "pr830_mixed",
+      "label": "PR #830 mixed-data experiment",
+      "minutes": 73.917,
+      "core": 0.267123,
+      "runs": 3,
+      "speedup": 1.0231877565149516,
+      "source": "https://github.com/karpathy/nanochat/pull/830",
+      "time_is_approximate": false
+    },
+    {
+      "id": "pr830_main",
+      "label": "PR #830 main ClimbMix recipe",
+      "minutes": 81.835,
+      "core": 0.261814,
+      "runs": 6,
+      "speedup": 1.1327917807054,
+      "source": "https://github.com/karpathy/nanochat/pull/830",
+      "time_is_approximate": false
+    },
+    {
+      "id": "pr854_hostram",
+      "label": "PR #854 host-RAM n-gram table",
+      "minutes": 91.74,
+      "core": 0.2578,
+      "runs": 3,
+      "speedup": 1.2699006288496781,
+      "source": "https://github.com/karpathy/nanochat/pull/854",
+      "time_is_approximate": false
+    },
+    {
+      "id": "official_run6",
+      "label": "Official leaderboard Run 6",
+      "minutes": 99.0,
+      "core": 0.262634,
+      "runs": 5,
+      "speedup": 1.370396362067998,
+      "source": "https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/README.md#time-to-gpt-2-leaderboard",
+      "time_is_approximate": true
+    }
+  ]
+}
