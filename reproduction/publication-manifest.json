@@ -1,0 +1,138 @@
+{
+  "schema": "publication-code-package-v1",
+  "scope": "Only frozen source, dependencies, portable scripts/manifests; README, figures and measured result publication are managed separately.",
+  "files": {
+    "LICENSE": {
+      "bytes": 1072,
+      "sha256": "42bb09f339a8af8b90d3b4969b6f6e4ba4aff3b5c614103b031fccdf71c8f772"
+    },
+    "NOTICE": {
+      "bytes": 503,
+      "sha256": "856b14f436d5537f5ce1df37b7eb6716b0c5e998a09e9250d51515667ed6d71a"
+    },
+    "nanochat/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "nanochat/checkpoint_manager.py": {
+      "bytes": 8722,
+      "sha256": "aa63399ddaf2a0412dc099287bf0dc879f9cb0cce00f861db50eeec58746f3ba"
+    },
+    "nanochat/common.py": {
+      "bytes": 13560,
+      "sha256": "b843db6e769db18d3364e42cb3742a9537a3d4cf43e5f098293babc7ddeb44bf"
+    },
+    "nanochat/core_eval.py": {
+      "bytes": 11572,
+      "sha256": "9303997ff17fa48ad5e5730f33b7e79a687cc2a1fdad928666bb63dc3514c51d"
+    },
+    "nanochat/dataloader.py": {
+      "bytes": 8820,
+      "sha256": "5be6d7d387d2ca94d5e6c5ecb14c29f92749eb70ba4be6b34cc84ac58e176426"
+    },
+    "nanochat/dataset.py": {
+      "bytes": 7014,
+      "sha256": "3ec2ad5987875e3d7f3ec72f08d78089fe8a3b20090448b798c21c4efb93d18a"
+    },
+    "nanochat/engine.py": {
+      "bytes": 15533,
+      "sha256": "76636fc24228e72afdafe4747ff8e52a6cc60a5ec61c97205061f3bfed0a86fd"
+    },
+    "nanochat/execution.py": {
+      "bytes": 5313,
+      "sha256": "122ce1457100a5cb20fbe9666a57006df3b0fe78c014240d2f87c35ccade2c1a"
+    },
+    "nanochat/flash_attention.py": {
+      "bytes": 7146,
+      "sha256": "a10b0b10ad91893fcf9c9b19c96bd3468a2721cf156dcdbeeeecf05f97f22c2f"
+    },
+    "nanochat/fp8.py": {
+      "bytes": 12008,
+      "sha256": "fb56d323639a315393b04cecd3469dc129e8c975638cfc7ced8067f647b868b6"
+    },
+    "nanochat/gpt.py": {
+      "bytes": 31355,
+      "sha256": "605f952da5dff2f91d1b5adb8a5724cefef58086cb032ab5938b22b2a495c1ca"
+    },
+    "nanochat/liger_nosync.py": {
+      "bytes": 6301,
+      "sha256": "32e83a45c7372c38ff2988d730944b1b541b58a10ad09c4735662afba01ef379"
+    },
+    "nanochat/loss_eval.py": {
+      "bytes": 3124,
+      "sha256": "00faad1e0ae8912022f79ee4bf583c4f9b4c058e4523c5674144648c49229fd6"
+    },
+    "nanochat/loss_reduction.py": {
+      "bytes": 628,
+      "sha256": "c42c9de6102910bef51a7349cd991e6a21915f51086c3d6dd173ae0a539569a7"
+    },
+    "nanochat/optim.py": {
+      "bytes": 24289,
+      "sha256": "21d509b284163166bac5103ad83c629e4a530aac34e1044b7dfd26c2d31598de"
+    },
+    "nanochat/tokenizer.py": {
+      "bytes": 12911,
+      "sha256": "e6f12cb88fead3e6d0d45a7dd2af4192280712d92bfde83e2399cc4b3a0860fb"
+    },
+    "pyproject.toml": {
+      "bytes": 1446,
+      "sha256": "fde357fb14fa49e362deba2a9270eaa1d220d199f164be5278a58f2157de2982"
+    },
+    "reproduce.sh": {
+      "bytes": 3763,
+      "sha256": "e444519acd3992acf9b97ad7c2e3fd84e1781c772b0844ad2e7a6dd1b7b8c7bb"
+    },
+    "reproduction/environment.json": {
+      "bytes": 1617,
+      "sha256": "e5a8ccc6b17eb0a89d198822032a5857cef5473bbe062e1183134cf4117e3acf"
+    },
+    "reproduction/input-manifest.json": {
+      "bytes": 32741,
+      "sha256": "2c594226bc58dd0f4936b799f1ba59690cd6a74d8b59493b5158a1d4946687c7"
+    },
+    "reproduction/install.sh": {
+      "bytes": 529,
+      "sha256": "a7bf4972dd4bd8d638d63b6b2a6478bfac1c1b6a7e6dee04f9c9376f4e2ee3bb"
+    },
+    "reproduction/prepare_data.sh": {
+      "bytes": 1808,
+      "sha256": "5654beeba15462f690c45a73ec3613a655c421d280fedebd5b601c89aeb86da2"
+    },
+    "reproduction/recipes.json": {
+      "bytes": 8812,
+      "sha256": "2cdcbe63383cc8bb11d639d8fcb82c407e39bdf490bd5b17bb2287e6af798c35"
+    },
+    "reproduction/recorded-packages.txt": {
+      "bytes": 1797,
+      "sha256": "47bda9b2d946b5fd8d5afdbea35734c1f8ab74cdff310a1a6640403dcf126b58"
+    },
+    "reproduction/source-manifest.json": {
+      "bytes": 6570,
+      "sha256": "ccc0b9f175e27d4f2e9dba658e922f6c532e6818773c49d51b6d42b4a1eb1f3c"
+    },
+    "reproduction/static-validation.json": {
+      "bytes": 4750,
+      "sha256": "c0818a72188c2d42868595777d88f15b0bde472f6fea145bc5172688eca646c0"
+    },
+    "reproduction/verify.py": {
+      "bytes": 7093,
+      "sha256": "d1f4a5b6f1a9bcd6eec28783f0f762a4835649e26c96000c0daaf9f115f644a2"
+    },
+    "scripts/base_eval.py": {
+      "bytes": 10311,
+      "sha256": "644083a99ded710f677b25168ca76fd0416dc7ef3890d346a72f76a20bb522fe"
+    },
+    "scripts/base_train.py": {
+      "bytes": 34682,
+      "sha256": "6314a72eadc7e2d6283fe6f94d0a3556dea9147d751e467323ae515fd70eedd4"
+    },
+    "scripts/tok_train.py": {
+      "bytes": 3730,
+      "sha256": "93237def990ddd96c9698bcc980881900e982dc8fc30dff913b132302b967aea"
+    },
+    "uv.lock": {
+      "bytes": 475160,
+      "sha256": "c1e9ca0257ef1a65e912277932f6523899b2e327da7fda0fc65e999defca76b6"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "organization": "AutoTrust",
+  "platform": "ScienceGuru",
+  "research_model": "Guru Turbo 1.2",
+  "attribution_basis": "Project owner supplied the platform and model attribution.",
+  "benchmark": "nanochat Time-to-GPT-2",
+  "trained_model": "GPT-style autoregressive language model, 22 layers, width1408, MLP4864",
+  "github_author": "aajing"
+}

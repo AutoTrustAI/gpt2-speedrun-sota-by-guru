@@ -1,0 +1,192 @@
+{
+  "query_started_at_utc": "2026-09-24T16:40:25Z",
+  "completed_at_utc": "2026-09-24T16:48:40.810231+00:00",
+  "official_master": {
+    "sha": "92d63d4e8bb4df75c3b71618f31ddde2378b2bcd",
+    "commit_date": "2026-07-03T22:54:57Z",
+    "source": "https://api.github.com/repos/karpathy/nanochat/commits/master",
+    "observed_at_utc": "2026-09-24T16:46:53.659432+00:00"
+  },
+  "sources": {
+    "readme": "https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/README.md#time-to-gpt-2-leaderboard",
+    "leaderboard": "https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/dev/LEADERBOARD.md",
+    "base_eval": "https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/scripts/base_eval.py#L51-L111",
+    "core_eval": "https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/nanochat/core_eval.py#L153-L242",
+    "speedrun": "https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/runs/speedrun.sh",
+    "pr830": "https://github.com/karpathy/nanochat/pull/830",
+    "pr854": "https://github.com/karpathy/nanochat/pull/854",
+    "giovannizinzi": "https://github.com/giovannizinzi",
+    "recursive": "https://github.com/recursive-org/first-steps-toward-automated-ai-research",
+    "recursive_nanochat": "https://github.com/recursive-org/first-steps-toward-automated-ai-research/tree/main/nanochat_autoresearch"
+  },
+  "baselines": [
+    {
+      "id": "official_run6",
+      "label": "Official leaderboard Run 6",
+      "minutes": 99.0,
+      "time_precision": "Published as 1.65 hours / 99 minutes; rounded reference",
+      "core": 0.262634,
+      "val_bpb": 0.718,
+      "runs": 5,
+      "author": "Andrej Karpathy (@karpathy)",
+      "method": "Autoresearch round 2, d24, ratio 8",
+      "date": "2026-03-14",
+      "commit": "a825e63",
+      "status": "Fastest entry currently listed in official README",
+      "sources": [
+        "readme",
+        "leaderboard"
+      ],
+      "nc033_comparison": {
+        "reference_seconds_from_published_minutes": 5940.0,
+        "seconds_saved": 1605.4876177310944,
+        "time_reduction_percent": 27.02841107291405,
+        "speedup": 1.370396362067998,
+        "precision": "Arithmetic against published rounded minute reference; not an estimate of run-to-run variance"
+      }
+    },
+    {
+      "id": "pr830_main",
+      "label": "PR #830 main ClimbMix recipe",
+      "minutes": 81.835,
+      "minutes_plus_minus_reported": 0.138,
+      "core": 0.261814,
+      "core_plus_minus_reported": 0.002295,
+      "val_bpb": 0.718786,
+      "val_bpb_plus_minus_reported": 5.4e-05,
+      "runs": 6,
+      "all_runs_above_core_floor": true,
+      "author": "Giovanni Zinzi (@giovannizinzi)",
+      "method": "d22, ratio 9.4, vocabulary 49152, FP8, Liger CE, selective RMSNorm scales",
+      "status": "Closed; head repository deleted 2026-09-03",
+      "sources": [
+        "pr830"
+      ],
+      "nc033_comparison": {
+        "reference_seconds_from_published_minutes": 4910.1,
+        "seconds_saved": 575.5876177310947,
+        "time_reduction_percent": 11.722523323987183,
+        "speedup": 1.1327917807054002,
+        "precision": "Arithmetic against published rounded minute reference; not an estimate of run-to-run variance"
+      }
+    },
+    {
+      "id": "pr830_mixed",
+      "label": "PR #830 mixed-data experiment",
+      "minutes": 73.917,
+      "core": 0.267123,
+      "val_bpb": 0.726888,
+      "runs": 3,
+      "author": "Giovanni Zinzi (@giovannizinzi)",
+      "method": "d22, character-balanced 80/20 ClimbMix/Cosmopedia-v2",
+      "status": "Reported research direction omitted from main recipe because d14 regressed",
+      "sources": [
+        "pr830"
+      ],
+      "nc033_comparison": {
+        "reference_seconds_from_published_minutes": 4435.02,
+        "seconds_saved": 100.5076177310948,
+        "time_reduction_percent": 2.2662269331614016,
+        "speedup": 1.0231877565149516,
+        "precision": "Arithmetic against published rounded minute reference; not an estimate of run-to-run variance"
+      }
+    },
+    {
+      "id": "pr854_hostram",
+      "label": "PR #854 host-RAM n-gram table",
+      "minutes": 91.74,
+      "core": 0.2578,
+      "val_bpb": 0.703668,
+      "bpb_kind": "Mean of reported minimum validation BPB",
+      "runs": 3,
+      "individual_minutes": [
+        91.56,
+        91.63,
+        92.03
+      ],
+      "individual_core": [
+        0.2592,
+        0.2557,
+        0.2584
+      ],
+      "runs_above_core_floor": 2,
+      "author": "Nihir Patel (@nihir27)",
+      "organization": "Oriole Networks",
+      "method": "d24 plus 300M-row host-RAM bigram/trigram table",
+      "status": "Open",
+      "sources": [
+        "pr854"
+      ],
+      "nc033_comparison": {
+        "reference_seconds_from_published_minutes": 5504.4,
+        "seconds_saved": 1169.887617731094,
+        "time_reduction_percent": 21.253681013936017,
+        "speedup": 1.2699006288496781,
+        "precision": "Arithmetic against published rounded minute reference; not an estimate of run-to-run variance"
+      }
+    }
+  ],
+  "protocol": {
+    "hardware": "One node with 8 H100 GPUs",
+    "objective": "Minimize native total_training_time with full CORE strictly above 0.256525",
+    "timer": "Training iterations, excluding evaluations and logging; setup/tokenizer training and later SFT are separate stages",
+    "quality_reporting": "Full CORE plus validation BPB",
+    "core_tasks": 22,
+    "core_formula": "mean_i((accuracy_i - r_i) / (1 - r_i)); r_i = Random baseline percentage / 100",
+    "core_mean_weighting": "Equal weight per task, not pooled examples",
+    "core_interpretation": "Chance-level task score maps to 0, perfect to 1; CORE is not raw accuracy",
+    "full_core_option": "base_eval --max-per-task=-1; base_train --core-metric-max-per-task=-1",
+    "standard_bpb_tokens_per_split": 20971520,
+    "integration_criteria": "Principled generalization across model depths and code simplicity are considered alongside speed/quality",
+    "sources": [
+      "leaderboard",
+      "base_eval",
+      "core_eval",
+      "speedrun"
+    ]
+  },
+  "organizations": [
+    {
+      "organization": "Oriole Networks",
+      "relation": "Explicit author affiliation and named collaborators in PR #854 disclosure",
+      "author": "Nihir Patel",
+      "collaborators": [
+        "Alessandro Ottino",
+        "Robin Matzner"
+      ],
+      "source": "pr854"
+    },
+    {
+      "organization": null,
+      "relation": "PR #830 names Giovanni Zinzi; checked PR/profile do not establish an employer",
+      "author": "Giovanni Zinzi",
+      "sources": [
+        "pr830",
+        "giovannizinzi"
+      ]
+    },
+    {
+      "organization": "NVIDIA",
+      "relation": "ClimbMix dataset supplier named in official Run 4; not an attribution of the speedrun implementation to an NVIDIA team",
+      "sources": [
+        "readme",
+        "leaderboard"
+      ]
+    },
+    {
+      "organization": "OpenAI",
+      "relation": "Original GPT-2 historical reference; no attribution of current Karpathy contribution to OpenAI",
+      "source": "readme"
+    },
+    {
+      "organization": "Recursive",
+      "relation": "Directly published related NanoChat autoresearch artifacts: single B200, fixed 5-minute budget, validation BPB; separate from 8-H100 Time-to-GPT-2 CORE",
+      "best_mean_val_bpb": 0.9109,
+      "seeds": 10,
+      "sources": [
+        "recursive",
+        "recursive_nanochat"
+      ]
+    }
+  ]
+}

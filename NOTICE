@@ -1,0 +1,5 @@
+This distribution contains nanochat source from https://github.com/karpathy/nanochat.
+The original MIT license and Andrej Karpathy copyright are retained in LICENSE.
+Original source-level acknowledgments, including Muon/Modded-NanoGPT references, remain intact.
+PyTorch, Triton, Liger Kernel, Flash Attention, RustBPE and other installed dependencies retain their own licenses.
+Dataset and evaluation-bundle rights are governed by their respective upstream sources; their contents are not bundled here.

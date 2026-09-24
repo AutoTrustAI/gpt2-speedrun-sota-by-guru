@@ -1,0 +1,41 @@
+[
+  {
+    "experiment": "nc027",
+    "mlp_width": 5120,
+    "steps": 9873,
+    "timed_steps": 9862,
+    "seed": 42,
+    "training_seconds": 4402.637227535248,
+    "training_minutes": 73.37728712558746,
+    "core": 0.258965,
+    "val_bpb": 0.723,
+    "source_commit": "4bbd30013920fb579fd0fc9e465ed79a5daafcd0",
+    "original_result_sha256": "551953e9af926149ee5a6bf8b76bb223b5b60572a83484b1c12e50f2fabae166"
+  },
+  {
+    "experiment": "nc029",
+    "mlp_width": 5120,
+    "steps": 9841,
+    "timed_steps": 9830,
+    "seed": 42,
+    "training_seconds": 4409.833083868027,
+    "training_minutes": 73.4972180644671,
+    "core": 0.263907,
+    "val_bpb": 0.723137,
+    "source_commit": "693694c1567e15286e0289360f9b4568773f4e7d",
+    "original_result_sha256": "6a2f27adbc80c3c0392554f7e7f8c9ffbcab71f83bbbb6b32269ca9c3322b628"
+  },
+  {
+    "experiment": "nc033",
+    "mlp_width": 4864,
+    "steps": 9841,
+    "timed_steps": 9830,
+    "seed": 42,
+    "training_seconds": 4334.512382268906,
+    "training_minutes": 72.2418730378151,
+    "core": 0.259212,
+    "val_bpb": 0.724029,
+    "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+    "original_result_sha256": "2b7c87af1cf79891ab9eb17b2d6962c09db84c1aa356f035fcf3f963914a5354"
+  }
+]

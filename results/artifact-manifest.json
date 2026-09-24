@@ -1,0 +1,20 @@
+{
+  "sha256": {
+    "results/experiments.csv": "9006e7b6d90551ef669ef96b36fbff444fc29d032d2af78da210a6710c7e6869",
+    "results/experiments.json": "a5047802564cb086c56393718b6cc1341a6c3ea59fab6cc8835d5a39fe151c67",
+    "results/nc027/core.csv": "ec845d522fe710d800879abc2f1873539bf481b7541286ba2736fa42644d757f",
+    "results/nc027/evaluation-metrics.log": "41e14e031d96d8669eeccd7c73e3c4e54a00b4e58b1b6569d220a38863c18abb",
+    "results/nc027/metrics.json": "0db7ca383cbed83a45641b651915bc5c249cfe07c3bf9ea1d2485b64ea3634d8",
+    "results/nc027/training-native.log": "e7edbd6d676c0fc92fdcd3cddd7a9e6229f3b907fd5d9b572bafe3b8aabdbd57",
+    "results/nc029/core.csv": "0c6a5898ece4e873f2700bddbbc93f25e013a416a7ddf3fa8441cda7c4290b69",
+    "results/nc029/evaluation-metrics.log": "2e8de9b1de321df8dbd22636938e109440634efb751b0a41213fe1008dc8aa86",
+    "results/nc029/metrics.json": "df06476e2aa54afd68ebee3248a8faceaaa7c7e7330c1834b4c7378d76af2155",
+    "results/nc029/training-native.log": "b435551b28174341e2fc3b221af5a87c6cf385f0b862db761b4d6a55eccb1756",
+    "results/nc033/configuration.json": "a91e76d873bcb4d1ce7429251d397c7fabdcec4626e7f3bf26afa55c9a57f6ec",
+    "results/nc033/core.csv": "29f38b92ebbf173849cbe9c76fe1d7108e29a10c7371ae8209f10138d68383bb",
+    "results/nc033/evaluation-metrics.log": "a2e1214ad17d69afbb1ae7154f872c2ef83a7bb9b66dd7a3fdd1c37baa71799e",
+    "results/nc033/metrics.json": "793d67274d247b3f21c176692722a087845907de487f538556a1b24755b86fdb",
+    "results/nc033/training-native.log": "9dfa43c82e4f0f0cd7f1a2d05a75066ece766b0a28ab7509a9244bf4334ff4bc",
+    "results/public-baselines.json": "276944c68580fb33a465563f19ce2dafeef29f4ba33bb83794fb0051c9568868"
+  }
+}

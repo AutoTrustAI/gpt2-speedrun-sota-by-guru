@@ -1,0 +1,1128 @@
+{
+  "schema": "portable-input-identity-v1",
+  "relative_to": "NANOCHAT_BASE_DIR",
+  "dataset_repository": "https://huggingface.co/datasets/karpathy/climbmix-400b-shuffle",
+  "download_commands": [
+    [
+      "python",
+      "-m",
+      "nanochat.dataset",
+      "-n",
+      "8"
+    ],
+    [
+      "python",
+      "-m",
+      "scripts.tok_train",
+      "--vocab-size=49152"
+    ],
+    [
+      "python",
+      "-m",
+      "nanochat.dataset",
+      "-n",
+      "170"
+    ]
+  ],
+  "train_shards": 170,
+  "heldout_shard": "base_data_climbmix/shard_06542.parquet",
+  "parquet_inventory": [
+    {
+      "path": "base_data_climbmix/shard_00000.parquet",
+      "bytes": 92291918
+    },
+    {
+      "path": "base_data_climbmix/shard_00001.parquet",
+      "bytes": 92124317
+    },
+    {
+      "path": "base_data_climbmix/shard_00002.parquet",
+      "bytes": 91803619
+    },
+    {
+      "path": "base_data_climbmix/shard_00003.parquet",
+      "bytes": 91793972
+    },
+    {
+      "path": "base_data_climbmix/shard_00004.parquet",
+      "bytes": 91428652
+    },
+    {
+      "path": "base_data_climbmix/shard_00005.parquet",
+      "bytes": 91845922
+    },
+    {
+      "path": "base_data_climbmix/shard_00006.parquet",
+      "bytes": 91455616
+    },
+    {
+      "path": "base_data_climbmix/shard_00007.parquet",
+      "bytes": 91202032
+    },
+    {
+      "path": "base_data_climbmix/shard_00008.parquet",
+      "bytes": 91155507
+    },
+    {
+      "path": "base_data_climbmix/shard_00009.parquet",
+      "bytes": 92072356
+    },
+    {
+      "path": "base_data_climbmix/shard_00010.parquet",
+      "bytes": 92181541
+    },
+    {
+      "path": "base_data_climbmix/shard_00011.parquet",
+      "bytes": 91758078
+    },
+    {
+      "path": "base_data_climbmix/shard_00012.parquet",
+      "bytes": 91531067
+    },
+    {
+      "path": "base_data_climbmix/shard_00013.parquet",
+      "bytes": 91842434
+    },
+    {
+      "path": "base_data_climbmix/shard_00014.parquet",
+      "bytes": 91794786
+    },
+    {
+      "path": "base_data_climbmix/shard_00015.parquet",
+      "bytes": 91642426
+    },
+    {
+      "path": "base_data_climbmix/shard_00016.parquet",
+      "bytes": 91875697
+    },
+    {
+      "path": "base_data_climbmix/shard_00017.parquet",
+      "bytes": 92252148
+    },
+    {
+      "path": "base_data_climbmix/shard_00018.parquet",
+      "bytes": 92097325
+    },
+    {
+      "path": "base_data_climbmix/shard_00019.parquet",
+      "bytes": 91468190
+    },
+    {
+      "path": "base_data_climbmix/shard_00020.parquet",
+      "bytes": 92023878
+    },
+    {
+      "path": "base_data_climbmix/shard_00021.parquet",
+      "bytes": 92007015
+    },
+    {
+      "path": "base_data_climbmix/shard_00022.parquet",
+      "bytes": 91895569
+    },
+    {
+      "path": "base_data_climbmix/shard_00023.parquet",
+      "bytes": 91788901
+    },
+    {
+      "path": "base_data_climbmix/shard_00024.parquet",
+      "bytes": 91816001
+    },
+    {
+      "path": "base_data_climbmix/shard_00025.parquet",
+      "bytes": 92082140
+    },
+    {
+      "path": "base_data_climbmix/shard_00026.parquet",
+      "bytes": 91646155
+    },
+    {
+      "path": "base_data_climbmix/shard_00027.parquet",
+      "bytes": 91534737
+    },
+    {
+      "path": "base_data_climbmix/shard_00028.parquet",
+      "bytes": 92205715
+    },
+    {
+      "path": "base_data_climbmix/shard_00029.parquet",
+      "bytes": 91416996
+    },
+    {
+      "path": "base_data_climbmix/shard_00030.parquet",
+      "bytes": 91557375
+    },
+    {
+      "path": "base_data_climbmix/shard_00031.parquet",
+      "bytes": 91761076
+    },
+    {
+      "path": "base_data_climbmix/shard_00032.parquet",
+      "bytes": 91797604
+    },
+    {
+      "path": "base_data_climbmix/shard_00033.parquet",
+      "bytes": 91448157
+    },
+    {
+      "path": "base_data_climbmix/shard_00034.parquet",
+      "bytes": 91977442
+    },
+    {
+      "path": "base_data_climbmix/shard_00035.parquet",
+      "bytes": 91501064
+    },
+    {
+      "path": "base_data_climbmix/shard_00036.parquet",
+      "bytes": 91493685
+    },
+    {
+      "path": "base_data_climbmix/shard_00037.parquet",
+      "bytes": 91950930
+    },
+    {
+      "path": "base_data_climbmix/shard_00038.parquet",
+      "bytes": 91681390
+    },
+    {
+      "path": "base_data_climbmix/shard_00039.parquet",
+      "bytes": 91480777
+    },
+    {
+      "path": "base_data_climbmix/shard_00040.parquet",
+      "bytes": 91501658
+    },
+    {
+      "path": "base_data_climbmix/shard_00041.parquet",
+      "bytes": 91995895
+    },
+    {
+      "path": "base_data_climbmix/shard_00042.parquet",
+      "bytes": 91400837
+    },
+    {
+      "path": "base_data_climbmix/shard_00043.parquet",
+      "bytes": 91490600
+    },
+    {
+      "path": "base_data_climbmix/shard_00044.parquet",
+      "bytes": 91090081
+    },
+    {
+      "path": "base_data_climbmix/shard_00045.parquet",
+      "bytes": 91188024
+    },
+    {
+      "path": "base_data_climbmix/shard_00046.parquet",
+      "bytes": 91600459
+    },
+    {
+      "path": "base_data_climbmix/shard_00047.parquet",
+      "bytes": 92007753
+    },
+    {
+      "path": "base_data_climbmix/shard_00048.parquet",
+      "bytes": 91791765
+    },
+    {
+      "path": "base_data_climbmix/shard_00049.parquet",
+      "bytes": 91330275
+    },
+    {
+      "path": "base_data_climbmix/shard_00050.parquet",
+      "bytes": 91234778
+    },
+    {
+      "path": "base_data_climbmix/shard_00051.parquet",
+      "bytes": 92016071
+    },
+    {
+      "path": "base_data_climbmix/shard_00052.parquet",
+      "bytes": 91529024
+    },
+    {
+      "path": "base_data_climbmix/shard_00053.parquet",
+      "bytes": 91473476
+    },
+    {
+      "path": "base_data_climbmix/shard_00054.parquet",
+      "bytes": 91396912
+    },
+    {
+      "path": "base_data_climbmix/shard_00055.parquet",
+      "bytes": 91320632
+    },
+    {
+      "path": "base_data_climbmix/shard_00056.parquet",
+      "bytes": 91400250
+    },
+    {
+      "path": "base_data_climbmix/shard_00057.parquet",
+      "bytes": 91313283
+    },
+    {
+      "path": "base_data_climbmix/shard_00058.parquet",
+      "bytes": 91911182
+    },
+    {
+      "path": "base_data_climbmix/shard_00059.parquet",
+      "bytes": 91555652
+    },
+    {
+      "path": "base_data_climbmix/shard_00060.parquet",
+      "bytes": 91524191
+    },
+    {
+      "path": "base_data_climbmix/shard_00061.parquet",
+      "bytes": 91823199
+    },
+    {
+      "path": "base_data_climbmix/shard_00062.parquet",
+      "bytes": 91669638
+    },
+    {
+      "path": "base_data_climbmix/shard_00063.parquet",
+      "bytes": 92138204
+    },
+    {
+      "path": "base_data_climbmix/shard_00064.parquet",
+      "bytes": 92027475
+    },
+    {
+      "path": "base_data_climbmix/shard_00065.parquet",
+      "bytes": 91610871
+    },
+    {
+      "path": "base_data_climbmix/shard_00066.parquet",
+      "bytes": 91782288
+    },
+    {
+      "path": "base_data_climbmix/shard_00067.parquet",
+      "bytes": 91627031
+    },
+    {
+      "path": "base_data_climbmix/shard_00068.parquet",
+      "bytes": 91582958
+    },
+    {
+      "path": "base_data_climbmix/shard_00069.parquet",
+      "bytes": 92094808
+    },
+    {
+      "path": "base_data_climbmix/shard_00070.parquet",
+      "bytes": 91276778
+    },
+    {
+      "path": "base_data_climbmix/shard_00071.parquet",
+      "bytes": 91527354
+    },
+    {
+      "path": "base_data_climbmix/shard_00072.parquet",
+      "bytes": 91171991
+    },
+    {
+      "path": "base_data_climbmix/shard_00073.parquet",
+      "bytes": 91820849
+    },
+    {
+      "path": "base_data_climbmix/shard_00074.parquet",
+      "bytes": 92038597
+    },
+    {
+      "path": "base_data_climbmix/shard_00075.parquet",
+      "bytes": 91542457
+    },
+    {
+      "path": "base_data_climbmix/shard_00076.parquet",
+      "bytes": 91480315
+    },
+    {
+      "path": "base_data_climbmix/shard_00077.parquet",
+      "bytes": 91215695
+    },
+    {
+      "path": "base_data_climbmix/shard_00078.parquet",
+      "bytes": 92297727
+    },
+    {
+      "path": "base_data_climbmix/shard_00079.parquet",
+      "bytes": 92302344
+    },
+    {
+      "path": "base_data_climbmix/shard_00080.parquet",
+      "bytes": 91755139
+    },
+    {
+      "path": "base_data_climbmix/shard_00081.parquet",
+      "bytes": 91953019
+    },
+    {
+      "path": "base_data_climbmix/shard_00082.parquet",
+      "bytes": 91511623
+    },
+    {
+      "path": "base_data_climbmix/shard_00083.parquet",
+      "bytes": 91837292
+    },
+    {
+      "path": "base_data_climbmix/shard_00084.parquet",
+      "bytes": 91390849
+    },
+    {
+      "path": "base_data_climbmix/shard_00085.parquet",
+      "bytes": 91447629
+    },
+    {
+      "path": "base_data_climbmix/shard_00086.parquet",
+      "bytes": 92098233
+    },
+    {
+      "path": "base_data_climbmix/shard_00087.parquet",
+      "bytes": 91340825
+    },
+    {
+      "path": "base_data_climbmix/shard_00088.parquet",
+      "bytes": 91228987
+    },
+    {
+      "path": "base_data_climbmix/shard_00089.parquet",
+      "bytes": 92064537
+    },
+    {
+      "path": "base_data_climbmix/shard_00090.parquet",
+      "bytes": 92048118
+    },
+    {
+      "path": "base_data_climbmix/shard_00091.parquet",
+      "bytes": 91811974
+    },
+    {
+      "path": "base_data_climbmix/shard_00092.parquet",
+      "bytes": 91820437
+    },
+    {
+      "path": "base_data_climbmix/shard_00093.parquet",
+      "bytes": 92020735
+    },
+    {
+      "path": "base_data_climbmix/shard_00094.parquet",
+      "bytes": 91468677
+    },
+    {
+      "path": "base_data_climbmix/shard_00095.parquet",
+      "bytes": 92057617
+    },
+    {
+      "path": "base_data_climbmix/shard_00096.parquet",
+      "bytes": 92136374
+    },
+    {
+      "path": "base_data_climbmix/shard_00097.parquet",
+      "bytes": 91616098
+    },
+    {
+      "path": "base_data_climbmix/shard_00098.parquet",
+      "bytes": 92137123
+    },
+    {
+      "path": "base_data_climbmix/shard_00099.parquet",
+      "bytes": 91360745
+    },
+    {
+      "path": "base_data_climbmix/shard_00100.parquet",
+      "bytes": 92030208
+    },
+    {
+      "path": "base_data_climbmix/shard_00101.parquet",
+      "bytes": 91223597
+    },
+    {
+      "path": "base_data_climbmix/shard_00102.parquet",
+      "bytes": 91907524
+    },
+    {
+      "path": "base_data_climbmix/shard_00103.parquet",
+      "bytes": 91457455
+    },
+    {
+      "path": "base_data_climbmix/shard_00104.parquet",
+      "bytes": 91496905
+    },
+    {
+      "path": "base_data_climbmix/shard_00105.parquet",
+      "bytes": 91956808
+    },
+    {
+      "path": "base_data_climbmix/shard_00106.parquet",
+      "bytes": 91690455
+    },
+    {
+      "path": "base_data_climbmix/shard_00107.parquet",
+      "bytes": 92143932
+    },
+    {
+      "path": "base_data_climbmix/shard_00108.parquet",
+      "bytes": 92045558
+    },
+    {
+      "path": "base_data_climbmix/shard_00109.parquet",
+      "bytes": 91474944
+    },
+    {
+      "path": "base_data_climbmix/shard_00110.parquet",
+      "bytes": 91725399
+    },
+    {
+      "path": "base_data_climbmix/shard_00111.parquet",
+      "bytes": 91978492
+    },
+    {
+      "path": "base_data_climbmix/shard_00112.parquet",
+      "bytes": 91671514
+    },
+    {
+      "path": "base_data_climbmix/shard_00113.parquet",
+      "bytes": 91586387
+    },
+    {
+      "path": "base_data_climbmix/shard_00114.parquet",
+      "bytes": 91858796
+    },
+    {
+      "path": "base_data_climbmix/shard_00115.parquet",
+      "bytes": 91573477
+    },
+    {
+      "path": "base_data_climbmix/shard_00116.parquet",
+      "bytes": 91654881
+    },
+    {
+      "path": "base_data_climbmix/shard_00117.parquet",
+      "bytes": 92170361
+    },
+    {
+      "path": "base_data_climbmix/shard_00118.parquet",
+      "bytes": 92029626
+    },
+    {
+      "path": "base_data_climbmix/shard_00119.parquet",
+      "bytes": 91733735
+    },
+    {
+      "path": "base_data_climbmix/shard_00120.parquet",
+      "bytes": 92138415
+    },
+    {
+      "path": "base_data_climbmix/shard_00121.parquet",
+      "bytes": 91671876
+    },
+    {
+      "path": "base_data_climbmix/shard_00122.parquet",
+      "bytes": 91482449
+    },
+    {
+      "path": "base_data_climbmix/shard_00123.parquet",
+      "bytes": 91230975
+    },
+    {
+      "path": "base_data_climbmix/shard_00124.parquet",
+      "bytes": 91317127
+    },
+    {
+      "path": "base_data_climbmix/shard_00125.parquet",
+      "bytes": 92253123
+    },
+    {
+      "path": "base_data_climbmix/shard_00126.parquet",
+      "bytes": 91884928
+    },
+    {
+      "path": "base_data_climbmix/shard_00127.parquet",
+      "bytes": 92081811
+    },
+    {
+      "path": "base_data_climbmix/shard_00128.parquet",
+      "bytes": 91562328
+    },
+    {
+      "path": "base_data_climbmix/shard_00129.parquet",
+      "bytes": 91515220
+    },
+    {
+      "path": "base_data_climbmix/shard_00130.parquet",
+      "bytes": 92033034
+    },
+    {
+      "path": "base_data_climbmix/shard_00131.parquet",
+      "bytes": 91853766
+    },
+    {
+      "path": "base_data_climbmix/shard_00132.parquet",
+      "bytes": 91477443
+    },
+    {
+      "path": "base_data_climbmix/shard_00133.parquet",
+      "bytes": 91503346
+    },
+    {
+      "path": "base_data_climbmix/shard_00134.parquet",
+      "bytes": 91680807
+    },
+    {
+      "path": "base_data_climbmix/shard_00135.parquet",
+      "bytes": 92048956
+    },
+    {
+      "path": "base_data_climbmix/shard_00136.parquet",
+      "bytes": 91972305
+    },
+    {
+      "path": "base_data_climbmix/shard_00137.parquet",
+      "bytes": 91988749
+    },
+    {
+      "path": "base_data_climbmix/shard_00138.parquet",
+      "bytes": 91458690
+    },
+    {
+      "path": "base_data_climbmix/shard_00139.parquet",
+      "bytes": 91189945
+    },
+    {
+      "path": "base_data_climbmix/shard_00140.parquet",
+      "bytes": 91404193
+    },
+    {
+      "path": "base_data_climbmix/shard_00141.parquet",
+      "bytes": 91956652
+    },
+    {
+      "path": "base_data_climbmix/shard_00142.parquet",
+      "bytes": 90998299
+    },
+    {
+      "path": "base_data_climbmix/shard_00143.parquet",
+      "bytes": 91263468
+    },
+    {
+      "path": "base_data_climbmix/shard_00144.parquet",
+      "bytes": 91632293
+    },
+    {
+      "path": "base_data_climbmix/shard_00145.parquet",
+      "bytes": 92094713
+    },
+    {
+      "path": "base_data_climbmix/shard_00146.parquet",
+      "bytes": 91631957
+    },
+    {
+      "path": "base_data_climbmix/shard_00147.parquet",
+      "bytes": 91577857
+    },
+    {
+      "path": "base_data_climbmix/shard_00148.parquet",
+      "bytes": 91510406
+    },
+    {
+      "path": "base_data_climbmix/shard_00149.parquet",
+      "bytes": 92209889
+    },
+    {
+      "path": "base_data_climbmix/shard_00150.parquet",
+      "bytes": 92107518
+    },
+    {
+      "path": "base_data_climbmix/shard_00151.parquet",
+      "bytes": 91288627
+    },
+    {
+      "path": "base_data_climbmix/shard_00152.parquet",
+      "bytes": 92107913
+    },
+    {
+      "path": "base_data_climbmix/shard_00153.parquet",
+      "bytes": 91591975
+    },
+    {
+      "path": "base_data_climbmix/shard_00154.parquet",
+      "bytes": 91879273
+    },
+    {
+      "path": "base_data_climbmix/shard_00155.parquet",
+      "bytes": 91627812
+    },
+    {
+      "path": "base_data_climbmix/shard_00156.parquet",
+      "bytes": 91701780
+    },
+    {
+      "path": "base_data_climbmix/shard_00157.parquet",
+      "bytes": 91972634
+    },
+    {
+      "path": "base_data_climbmix/shard_00158.parquet",
+      "bytes": 91571633
+    },
+    {
+      "path": "base_data_climbmix/shard_00159.parquet",
+      "bytes": 92152183
+    },
+    {
+      "path": "base_data_climbmix/shard_00160.parquet",
+      "bytes": 92230059
+    },
+    {
+      "path": "base_data_climbmix/shard_00161.parquet",
+      "bytes": 91432213
+    },
+    {
+      "path": "base_data_climbmix/shard_00162.parquet",
+      "bytes": 92262329
+    },
+    {
+      "path": "base_data_climbmix/shard_00163.parquet",
+      "bytes": 91631871
+    },
+    {
+      "path": "base_data_climbmix/shard_00164.parquet",
+      "bytes": 91306308
+    },
+    {
+      "path": "base_data_climbmix/shard_00165.parquet",
+      "bytes": 91202544
+    },
+    {
+      "path": "base_data_climbmix/shard_00166.parquet",
+      "bytes": 91715632
+    },
+    {
+      "path": "base_data_climbmix/shard_00167.parquet",
+      "bytes": 92083729
+    },
+    {
+      "path": "base_data_climbmix/shard_00168.parquet",
+      "bytes": 91729460
+    },
+    {
+      "path": "base_data_climbmix/shard_00169.parquet",
+      "bytes": 91243921
+    },
+    {
+      "path": "base_data_climbmix/shard_06542.parquet",
+      "bytes": 91699537
+    }
+  ],
+  "hashed_inputs": [
+    {
+      "path": "base_data_climbmix/shard_06542.parquet",
+      "bytes": 91699537,
+      "sha256": "769fe59d108dfd2cfa186c63173b83fbfb90a7adb3519519ba6eaa6ca9889f94"
+    },
+    {
+      "path": "tokenizer/tokenizer.pkl",
+      "bytes": 627109,
+      "sha256": "02f869325f94411f33387a87fed0f7f76ce55579cb9b702d2afcfa40a8ba8b86"
+    },
+    {
+      "path": "tokenizer/token_bytes.pt",
+      "bytes": 198185,
+      "sha256": "bedce5a84972b97e822bb122492817a33ed768a9866a0db3847edd8dfafbffae"
+    }
+  ],
+  "evaluation_bundle_url": "https://karpathy-public.s3.us-west-2.amazonaws.com/eval_bundle.zip",
+  "evaluation_files": [
+    {
+      "path": "eval_bundle/EVAL_GAUNTLET.md",
+      "bytes": 18304,
+      "sha256": "19d690783e0386f75ff7f8ea8bb3f61d8f066cd96bb1d9463bb0d176a3b894bc"
+    },
+    {
+      "path": "eval_bundle/core.yaml",
+      "bytes": 3199,
+      "sha256": "463f6ae0aa127fbd41fa655f8919e136858f4849eef176922a3be96e102ce7e7"
+    },
+    {
+      "path": "eval_bundle/eval_data/commonsense_reasoning/bigbench_novel_concepts.jsonl",
+      "bytes": 13747,
+      "sha256": "66d4c62351528a5c148160a9106a8949a0a66aedf5158738b20a1a6527874cd6"
+    },
+    {
+      "path": "eval_bundle/eval_data/commonsense_reasoning/bigbench_strange_stories.jsonl",
+      "bytes": 91434,
+      "sha256": "366cb6426096629b685d0e55ec4735331f858e56988c11142ddca15e6bfc8e60"
+    },
+    {
+      "path": "eval_bundle/eval_data/commonsense_reasoning/bigbench_strategy_qa.jsonl",
+      "bytes": 260942,
+      "sha256": "b550289adc9304c979ca8ba36b3424f5c187c606d34eef7d940a79f964c2ad8f"
+    },
+    {
+      "path": "eval_bundle/eval_data/commonsense_reasoning/commonsense_qa.jsonl",
+      "bytes": 258861,
+      "sha256": "2771f63f8127c0725b1f6b0ef2cd2ef6469168ae5875fc8d276b25b4f32c8c1a"
+    },
+    {
+      "path": "eval_bundle/eval_data/commonsense_reasoning/copa.jsonl",
+      "bytes": 14627,
+      "sha256": "595dca44dec54c849490bd403a3e24a29e3b944065783222ebb0eb1a55298846"
+    },
+    {
+      "path": "eval_bundle/eval_data/commonsense_reasoning/openbook_qa.jsonl",
+      "bytes": 88043,
+      "sha256": "adb2e5c7f8db810ddad4d6b2bf53dcc86dcc545499f7aafcaf42a8e179476c09"
+    },
+    {
+      "path": "eval_bundle/eval_data/commonsense_reasoning/piqa.jsonl",
+      "bytes": 533992,
+      "sha256": "d2870e73aec5154df3faf259b7700876e11608eebdf69e9d6667435673dbe4e0"
+    },
+    {
+      "path": "eval_bundle/eval_data/commonsense_reasoning/siqa.jsonl",
+      "bytes": 477682,
+      "sha256": "2722a2c30a08dfaee4c5210eeb318dc82c73d675bda32a920b749ae4e2b89598"
+    },
+    {
+      "path": "eval_bundle/eval_data/language_understanding/bigbench_conceptual_combinations.jsonl",
+      "bytes": 52711,
+      "sha256": "37432b8edfe67090e2b5b6e4c31cf4e215725981d0d39bd13c81ce7425f64498"
+    },
+    {
+      "path": "eval_bundle/eval_data/language_understanding/bigbench_conlang_translation.jsonl",
+      "bytes": 222606,
+      "sha256": "8e01e3b40b1ceb1f7198109aeb7c5312f3bc0048c8418d15be25fee526b2b3ef"
+    },
+    {
+      "path": "eval_bundle/eval_data/language_understanding/bigbench_language_identification.jsonl",
+      "bytes": 3940808,
+      "sha256": "80c98d8e7ab8213513d1643886229c05c40a6837353b07c19ac7bd860668954e"
+    },
+    {
+      "path": "eval_bundle/eval_data/language_understanding/hellaswag.jsonl",
+      "bytes": 8258653,
+      "sha256": "52a31d32b14dff7713a705be664cbeff77eb66edcf7f8b0a5e9408633929b448"
+    },
+    {
+      "path": "eval_bundle/eval_data/language_understanding/lambada_openai.jsonl",
+      "bytes": 1895241,
+      "sha256": "411bfbe5b9054346b6a19299c0242670adbefb9162efd958593cbc0290b8c9dc"
+    },
+    {
+      "path": "eval_bundle/eval_data/language_understanding/lambada_openai_small.jsonl",
+      "bytes": 3033,
+      "sha256": "9df9ea3f93e03f5009b22d360eafc923ae959bf2b94c465099d6747a9e389343"
+    },
+    {
+      "path": "eval_bundle/eval_data/language_understanding/winograd_wsc.jsonl",
+      "bytes": 60523,
+      "sha256": "746336c27cd2e39a554cb1b8b4869d0f1ae2577ac5bfe799842d26bca5a5bf5e"
+    },
+    {
+      "path": "eval_bundle/eval_data/language_understanding/winogrande.jsonl",
+      "bytes": 312369,
+      "sha256": "ea1592526f3bfdd0948ed3acb1b4dfa3f83d23698917118688ee1df7f8d4b8d7"
+    },
+    {
+      "path": "eval_bundle/eval_data/programming/human_eval-0.25.jsonl",
+      "bytes": 275093,
+      "sha256": "79d4dee7372117eda50635447de09879ac189963378412dc97be12c4870e1bad"
+    },
+    {
+      "path": "eval_bundle/eval_data/programming/human_eval-0.5.jsonl",
+      "bytes": 275055,
+      "sha256": "eb2a3ac74f5d8e572e791cfcedcf48ebc9bab7332c6265d39d68b6af006a6242"
+    },
+    {
+      "path": "eval_bundle/eval_data/programming/human_eval-0.75.jsonl",
+      "bytes": 275055,
+      "sha256": "9651a7ee8206c9cb81a17adde85b3436d778bb4a57ad09a1862f8cc88d928a85"
+    },
+    {
+      "path": "eval_bundle/eval_data/programming/human_eval.jsonl",
+      "bytes": 274980,
+      "sha256": "a0eb83f052f2ad70ba09061d558a8942b0f78823fb391adab7c5cbf728e1b82c"
+    },
+    {
+      "path": "eval_bundle/eval_data/programming/human_eval_return_complex.jsonl",
+      "bytes": 205599,
+      "sha256": "e3a732c2e79a79416de1cb2b16af7af850b9d38674ae67d46cfdfc5a6139a433"
+    },
+    {
+      "path": "eval_bundle/eval_data/programming/human_eval_return_simple.jsonl",
+      "bytes": 69333,
+      "sha256": "6c921b573b69eba37f8fd61bedb8a7f7ab7dc9bb25e93c65c093c593eb1a2a31"
+    },
+    {
+      "path": "eval_bundle/eval_data/programming/processed_human_eval_cpp.jsonl",
+      "bytes": 269920,
+      "sha256": "f21df5f13168e0878b70ad5ac3eb88cb1ad9afc77529ad5b75b98437d5a55d30"
+    },
+    {
+      "path": "eval_bundle/eval_data/programming/processed_human_eval_js.jsonl",
+      "bytes": 269725,
+      "sha256": "de1b52b742622de56c02538494ac6e6e111a871cc466f09d734ac763b18f8ea1"
+    },
+    {
+      "path": "eval_bundle/eval_data/reading_comprehension/agi_eval_lsat_lr.jsonl",
+      "bytes": 549297,
+      "sha256": "e4a273cf9d7013b48e8cabceb54a0bf3434efa6f153a884e71ba0df5dc62d29e"
+    },
+    {
+      "path": "eval_bundle/eval_data/reading_comprehension/agi_eval_lsat_rc.jsonl",
+      "bytes": 963308,
+      "sha256": "8f67ecf0e760a8fc737ead2e63554bbf921b23989a3bc0039d9b2e993ef6295a"
+    },
+    {
+      "path": "eval_bundle/eval_data/reading_comprehension/agi_eval_sat_en.jsonl",
+      "bytes": 965560,
+      "sha256": "cb78f595cd4cbd226624d58c1a48f340ea9ad4d0a2b5b32126adfc15014170ea"
+    },
+    {
+      "path": "eval_bundle/eval_data/reading_comprehension/bigbench_understanding_fables.jsonl",
+      "bytes": 160404,
+      "sha256": "8578babfd4adbf1b6a77782fa5ecb0f252ca2ce0316f0f47cdd8689558037383"
+    },
+    {
+      "path": "eval_bundle/eval_data/reading_comprehension/boolq.jsonl",
+      "bytes": 2210395,
+      "sha256": "454ff101e614370bb1807fe7ebbda6fdb57e794b9662cc1ccae211bf1ff626c8"
+    },
+    {
+      "path": "eval_bundle/eval_data/reading_comprehension/coqa.jsonl",
+      "bytes": 18588497,
+      "sha256": "0c2b8029776a138f755d065b9506eb8e91bbd38c44dce321a75f9987bb7875aa"
+    },
+    {
+      "path": "eval_bundle/eval_data/reading_comprehension/narrative_qa.jsonl",
+      "bytes": 26476544,
+      "sha256": "80206805b392801d443defd7a244613ffcc74a17fef80769c5e46c09b9f20bdf"
+    },
+    {
+      "path": "eval_bundle/eval_data/reading_comprehension/pubmed_qa_labeled.jsonl",
+      "bytes": 1573403,
+      "sha256": "60b94cdc8f507371366e1c28dfd0b86429da691ca0acc9dc83c9be6975ef0b41"
+    },
+    {
+      "path": "eval_bundle/eval_data/reading_comprehension/squad.jsonl",
+      "bytes": 9810616,
+      "sha256": "41fe6c43e725c0dc9161465066932c46edc390bf4019c361c500bbc4b766a350"
+    },
+    {
+      "path": "eval_bundle/eval_data/safety/bbq.jsonl",
+      "bytes": 25615874,
+      "sha256": "2ed36e035518cd9734fed8f6273a69c621158593ff5f26e7e197e55c55b7d81e"
+    },
+    {
+      "path": "eval_bundle/eval_data/safety/enterprise_pii_classification.jsonl",
+      "bytes": 2300061,
+      "sha256": "de3a638feb3285dd45d54dddbc21fb26ecf1a89ef18e63582434e6e2eda2d14a"
+    },
+    {
+      "path": "eval_bundle/eval_data/safety/winogender_mc_female.jsonl",
+      "bytes": 14477,
+      "sha256": "f5ed69f1ae650cfcf4bc5ded84a549a9551c05fccbd69f99887b4e76a9209b9f"
+    },
+    {
+      "path": "eval_bundle/eval_data/safety/winogender_mc_male.jsonl",
+      "bytes": 14408,
+      "sha256": "a7790f7050a3fe59b0610839b2537c3335fc0703c319a7398f0aaa138bba3dc1"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/agi_eval_lsat_ar.jsonl",
+      "bytes": 219517,
+      "sha256": "9ffd73480b51746c11627e56239f8b87035eb255cb92c3a58fd64e2e4b65fb56"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/agi_eval_sat_math.jsonl",
+      "bytes": 252075,
+      "sha256": "36ec14e8834aad1b00a3ffb5a6a7b25932779ba31a0d9bdc972ec6815d626447"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/aqua.jsonl",
+      "bytes": 106987,
+      "sha256": "d2ac7ae68764d03caa0a7d51132cc6969e1b90832e8c4e8c260bd18327799ead"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/bigbench_cs_algorithms.jsonl",
+      "bytes": 235435,
+      "sha256": "8485683a8c7e7e6c9fc6ca3cc81140fd85edb27f34406a6736d1539cf7ebcb3a"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/bigbench_dyck_languages.jsonl",
+      "bytes": 198916,
+      "sha256": "106ba9ac7507c7ab385c5e59c49cd57aa83025abf080d9b2a2661c0d6c6dbcc5"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/bigbench_elementary_math_qa.jsonl",
+      "bytes": 11958044,
+      "sha256": "b6eafffa91ce88a97abce5745780986349caff91206560d49d908dd1cf0e2543"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/bigbench_logical_deduction.jsonl",
+      "bytes": 1266846,
+      "sha256": "07645a9e026d55444f677ff5ee6fff4f3fb84c030cfe3a66c716e4320433258c"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/bigbench_operators.jsonl",
+      "bytes": 35375,
+      "sha256": "41e2964ad619c49edd97c22b2c50f922a0241255d906a754bf81a20f4f66b85f"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/bigbench_repeat_copy_logic.jsonl",
+      "bytes": 7158,
+      "sha256": "8febd2c0080a15680cd17f92bfa30d87abcfac021e646e55d0b8ad69f0cfa767"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/bigbench_simple_arithmetic.jsonl",
+      "bytes": 3010,
+      "sha256": "8f5be26b313bd1dd53a4c09199a02df840256361e0ec2b9a616206a0d2fe11c9"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/gsm8k.jsonl",
+      "bytes": 770037,
+      "sha256": "de44d36e1b80fae762efc1e858c875ba83c208de1aba99deda890fff6b5f732d"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/gsm8k_prepended_8shot.jsonl",
+      "bytes": 3650733,
+      "sha256": "c4b1b7378385b1c4e4862c0d0dde5eac5c986ff991db8eb53db9adf0f47199d6"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/logi_qa.jsonl",
+      "bytes": 623079,
+      "sha256": "f1be83be1cdd76f56b82324d6d06258244fe37451479ffc9871c2ca0e7eec71f"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/math.jsonl",
+      "bytes": 4142474,
+      "sha256": "618231e6d1e0904db5508cb63fe239dad7621852ef7b31fbfaa64279e45f2c62"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/math_complex_soln.jsonl",
+      "bytes": 1789106,
+      "sha256": "305c0a52f74babaa9bbf00baef8682933d96fe6164aa98767023bdaa976f334d"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/math_qa.jsonl",
+      "bytes": 844586,
+      "sha256": "743566d6e9925eb5bfc215ee7af8aaad58c2e821a637438aba7b9b30acdf6e50"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/math_simple_soln.jsonl",
+      "bytes": 2353368,
+      "sha256": "4cef7d541d8b6fb8117f62f088f4077045d9fd730428474cab4e082066793e73"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/simple_arithmetic_nospaces.jsonl",
+      "bytes": 51711,
+      "sha256": "2b68696de9e381e9bddbd0af21dfd745400903b0ca5abf1b500143315b443228"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/simple_arithmetic_withspaces.jsonl",
+      "bytes": 58091,
+      "sha256": "eb95a1440f1824c36beb3449e74a2a98c5907aa916eefa0170351454f5f6d92b"
+    },
+    {
+      "path": "eval_bundle/eval_data/symbolic_problem_solving/svamp.jsonl",
+      "bytes": 70844,
+      "sha256": "6e9d75302c2663a8c8ce48927d784244480bc75cd0eda539677b6a92a2ff5b97"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/arc_challenge.jsonl",
+      "bytes": 365606,
+      "sha256": "1ae3aeedf1951d881cbd5c2e3a31e78a1993d251479afbe4cb413b6707244636"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/arc_easy.jsonl",
+      "bytes": 636665,
+      "sha256": "d2d12e59543acf9a5ef6079634a72b30215e36c2fd4236fff3bc855d287b87f5"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/bigbench_misconceptions.jsonl",
+      "bytes": 47507,
+      "sha256": "d041a77a6b22cf5b768a442e8b73e99b0532a46398246ff3f4501a0a6d19e474"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/bigbench_movie_recommendation.jsonl",
+      "bytes": 126277,
+      "sha256": "9fb72545b8988e88a3554090c2fade2af73542e9b3a5ecf384cd17ebf1283a4d"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/bigbench_qa_wikidata.jsonl",
+      "bytes": 1639702,
+      "sha256": "bb0d22727cb25beffb022c8e8c0c3e1159c8b3c7bd7284603c0d6491f8616265"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/jeopardy_all.jsonl",
+      "bytes": 364582,
+      "sha256": "187e7f270a440c63d6cf11a57459fdc7e0bce889338225e42cc88e24ee13d52e"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/jeopardy_small.jsonl",
+      "bytes": 2827,
+      "sha256": "c3d692173917ac62e7e7ea406337ced1dfef4076247f3cb890328bd122295d1a"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/mmlu.jsonl",
+      "bytes": 8058278,
+      "sha256": "005f5bee3ab3a7fe01d2f79039f06644f940651e8f1a3db7046b3df8cf55bf75"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/mmlu_expand.jsonl",
+      "bytes": 10422496,
+      "sha256": "b9a4206b77403ae1d618a331f6b0871c1b435cfdc7e92c0dcc2c18efca9f6bfa"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/triviaqa.jsonl",
+      "bytes": 4887052,
+      "sha256": "dee847ab604d578d80ec53fa980c1f2177e83ab407867b233c71def7a6d65447"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/triviaqa_sm.jsonl",
+      "bytes": 4826978,
+      "sha256": "68eab2fd9310eeff116fafb2e692cdadb9d609feba83400486c3481a44144f8e"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/triviaqa_sm_sub.jsonl",
+      "bytes": 1263021,
+      "sha256": "e3e8222e94cae291d7ab132e59f09c4f51580ed3e23639cf29c2926b4c8284e9"
+    },
+    {
+      "path": "eval_bundle/eval_data/world_knowledge/triviaqa_small.jsonl",
+      "bytes": 11918,
+      "sha256": "a484b8f1da8b890dab1d1501b0cafac7ffa2c694a9f234125482b103f3c6fa09"
+    },
+    {
+      "path": "eval_bundle/eval_meta_data.csv",
+      "bytes": 16612,
+      "sha256": "84e279cdc0d836c9ea3a6e55a99102f8ee18f72809fe7aa6ac5a1fe630aa492f"
+    },
+    {
+      "path": "eval_bundle/openai-community-gpt2-large.csv",
+      "bytes": 1440,
+      "sha256": "ee79a88dc99126fb609f71b94b73c0baf8849494b19834222a7c12f086b39990"
+    },
+    {
+      "path": "eval_bundle/openai-community-gpt2-medium.csv",
+      "bytes": 1440,
+      "sha256": "9f4b9ca80cf26944f051250b16aa0e5d8d162d493e03f2521a80da3fcca63c48"
+    },
+    {
+      "path": "eval_bundle/openai-community-gpt2-xl.csv",
+      "bytes": 1440,
+      "sha256": "09be65b165b2510bd6003e999572613d69b9863b797ffb7090180b30cd43ae4d"
+    },
+    {
+      "path": "eval_bundle/openai-community-gpt2.csv",
+      "bytes": 1440,
+      "sha256": "d37cf6f03a5b554f32dcb415f4c7ec25750da046fdb0ce0d6224ac3f4a2d44d0"
+    }
+  ],
+  "scope": "Training shard names and sizes plus heldout/tokenizer/evaluation SHA256. Full training-content SHA256 hashes were not recorded; no portable mtime equality is claimed.",
+  "tokenizer_recipe": {
+    "vocab_size": 49152,
+    "max_chars": 2000000000,
+    "doc_cap": 10000,
+    "rustbpe": "0.1.0",
+    "token_bytes_dtype": "int32"
+  }
+}

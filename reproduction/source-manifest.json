@@ -1,0 +1,163 @@
+{
+  "schema": "frozen-publication-source-v1",
+  "upstream_repository": "https://github.com/karpathy/nanochat",
+  "frozen_training_source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+  "files": {
+    "LICENSE": {
+      "sha256": "42bb09f339a8af8b90d3b4969b6f6e4ba4aff3b5c614103b031fccdf71c8f772",
+      "bytes": 1072,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "LICENSE",
+      "modified": false
+    },
+    "nanochat/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/__init__.py",
+      "modified": false
+    },
+    "nanochat/checkpoint_manager.py": {
+      "sha256": "aa63399ddaf2a0412dc099287bf0dc879f9cb0cce00f861db50eeec58746f3ba",
+      "bytes": 8722,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/checkpoint_manager.py",
+      "modified": false
+    },
+    "nanochat/common.py": {
+      "sha256": "b843db6e769db18d3364e42cb3742a9537a3d4cf43e5f098293babc7ddeb44bf",
+      "bytes": 13560,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/common.py",
+      "modified": false
+    },
+    "nanochat/core_eval.py": {
+      "sha256": "9303997ff17fa48ad5e5730f33b7e79a687cc2a1fdad928666bb63dc3514c51d",
+      "bytes": 11572,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/core_eval.py",
+      "modified": false
+    },
+    "nanochat/dataloader.py": {
+      "sha256": "5be6d7d387d2ca94d5e6c5ecb14c29f92749eb70ba4be6b34cc84ac58e176426",
+      "bytes": 8820,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/dataloader.py",
+      "modified": false
+    },
+    "nanochat/dataset.py": {
+      "sha256": "3ec2ad5987875e3d7f3ec72f08d78089fe8a3b20090448b798c21c4efb93d18a",
+      "bytes": 7014,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/dataset.py",
+      "modified": false
+    },
+    "nanochat/engine.py": {
+      "sha256": "76636fc24228e72afdafe4747ff8e52a6cc60a5ec61c97205061f3bfed0a86fd",
+      "bytes": 15533,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/engine.py",
+      "modified": false
+    },
+    "nanochat/execution.py": {
+      "sha256": "122ce1457100a5cb20fbe9666a57006df3b0fe78c014240d2f87c35ccade2c1a",
+      "bytes": 5313,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/execution.py",
+      "modified": false
+    },
+    "nanochat/flash_attention.py": {
+      "sha256": "a10b0b10ad91893fcf9c9b19c96bd3468a2721cf156dcdbeeeecf05f97f22c2f",
+      "bytes": 7146,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/flash_attention.py",
+      "modified": false
+    },
+    "nanochat/fp8.py": {
+      "sha256": "fb56d323639a315393b04cecd3469dc129e8c975638cfc7ced8067f647b868b6",
+      "bytes": 12008,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/fp8.py",
+      "modified": false
+    },
+    "nanochat/gpt.py": {
+      "sha256": "605f952da5dff2f91d1b5adb8a5724cefef58086cb032ab5938b22b2a495c1ca",
+      "bytes": 31355,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/gpt.py",
+      "modified": false
+    },
+    "nanochat/liger_nosync.py": {
+      "sha256": "32e83a45c7372c38ff2988d730944b1b541b58a10ad09c4735662afba01ef379",
+      "bytes": 6301,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/liger_nosync.py",
+      "modified": false
+    },
+    "nanochat/loss_eval.py": {
+      "sha256": "00faad1e0ae8912022f79ee4bf583c4f9b4c058e4523c5674144648c49229fd6",
+      "bytes": 3124,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/loss_eval.py",
+      "modified": false
+    },
+    "nanochat/loss_reduction.py": {
+      "sha256": "c42c9de6102910bef51a7349cd991e6a21915f51086c3d6dd173ae0a539569a7",
+      "bytes": 628,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/loss_reduction.py",
+      "modified": false
+    },
+    "nanochat/optim.py": {
+      "sha256": "21d509b284163166bac5103ad83c629e4a530aac34e1044b7dfd26c2d31598de",
+      "bytes": 24289,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/optim.py",
+      "modified": false
+    },
+    "nanochat/tokenizer.py": {
+      "sha256": "e6f12cb88fead3e6d0d45a7dd2af4192280712d92bfde83e2399cc4b3a0860fb",
+      "bytes": 12911,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "nanochat/tokenizer.py",
+      "modified": false
+    },
+    "pyproject.toml": {
+      "sha256": "fde357fb14fa49e362deba2a9270eaa1d220d199f164be5278a58f2157de2982",
+      "bytes": 1446,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "pyproject.toml",
+      "modified": false
+    },
+    "scripts/base_eval.py": {
+      "sha256": "644083a99ded710f677b25168ca76fd0416dc7ef3890d346a72f76a20bb522fe",
+      "bytes": 10311,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "scripts/base_eval.py",
+      "modified": false
+    },
+    "scripts/base_train.py": {
+      "sha256": "6314a72eadc7e2d6283fe6f94d0a3556dea9147d751e467323ae515fd70eedd4",
+      "bytes": 34682,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "scripts/base_train.py",
+      "modified": false
+    },
+    "scripts/tok_train.py": {
+      "sha256": "93237def990ddd96c9698bcc980881900e982dc8fc30dff913b132302b967aea",
+      "bytes": 3730,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "scripts/tok_train.py",
+      "modified": false
+    },
+    "uv.lock": {
+      "sha256": "c1e9ca0257ef1a65e912277932f6523899b2e327da7fda0fc65e999defca76b6",
+      "bytes": 475160,
+      "source_commit": "a72e2f4b16595a3409edc39b00e07e22bee45c09",
+      "source_path": "uv.lock",
+      "modified": false
+    }
+  },
+  "source_scope": "Complete frozen nanochat package and base training/evaluation/tokenizer scripts, original license and dependency metadata. No campaign controllers, datasets, weights, tokenizer artifacts or compiled kernel cache.",
+  "unchanged_between_recipes": true
+}

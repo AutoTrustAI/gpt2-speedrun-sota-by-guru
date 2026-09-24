@@ -1,0 +1,13 @@
+{
+  "experiment": "nc027",
+  "mlp_width": 5120,
+  "steps": 9873,
+  "timed_steps": 9862,
+  "seed": 42,
+  "training_seconds": 4402.637227535248,
+  "training_minutes": 73.37728712558746,
+  "core": 0.258965,
+  "val_bpb": 0.723,
+  "source_commit": "4bbd30013920fb579fd0fc9e465ed79a5daafcd0",
+  "original_result_sha256": "551953e9af926149ee5a6bf8b76bb223b5b60572a83484b1c12e50f2fabae166"
+}
